@@ -4,11 +4,12 @@ async function main(){
 const sc = new createInterface({input, output});
 
 let qteGobelets = 63;
+let produit;
 
 const prix = new Map();
-prix.set ("1", '1,20');
-prix.set ("2", '1,10');
-prix.set ("3", '1,50');
+prix.set("1", 'Choix n°1. Café : 1,20 euros');
+prix.set("2", 'Choix n°2. Thé : 1,10 euros');
+prix.set("3", 'Choix n°3. Chocolad chaud : 1,50 euros');
 
 if(qteGobelets>=1){
 
@@ -16,8 +17,9 @@ let response = await sc.question('Composez le code de votre boisson: \n1 : Café
 console.log(response);
         
         if(prix.has(response)){
-        console.log('Vous avez sélectionné : '+response);
-        prix.get(response)
+        produit = prix.get(response);
+        console.log('Vous avez sélectionné : '+produit);
+        
                               }
 
 
@@ -31,7 +33,7 @@ console.log(response);
 
                 
         else{
-
+        console.log("Code inexistant. Merci de composer votre code boisson.")
         }
 
                 }
