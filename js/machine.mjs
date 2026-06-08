@@ -18,7 +18,7 @@ let montantEnTrop;
 const prix = new Map();
 prix.set("1", 2.50);
 prix.set("2", 6.80);
-prix.set("3", 20.50);
+prix.set("3", 20.60);
 
 const boisson = new Map();
 boisson.set("1", 'Café');

@@ -7,7 +7,7 @@ console.log(response);
 
 
 if(response=='OUI'){
-console.log('Je vévifie l\'état de mon vélo'); 
+console.log('Je vérifie l\'état de mon vélo'); 
 response=await sc.question('Mon vélo fonctionne bien ? OUI/NON'); 
 
         if(response=='NON'){
