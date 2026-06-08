@@ -54,21 +54,20 @@ console.log(response);
                 console.log(sousEnMoins); //le client rajoute le montant restant 
 
                                 if(sousEnMoins<manque){ //on doit rajouter sousEnMoins au montant qui manque
-                                montantARendre = sousEnMoins+argent; //
-                                const montantARendreCon = montantARendre.toFixed(2); 
+                                montantARendre = sousEnMoins+argent; //le montant que la machine doit nous rendre = l'argent qu'on a mis la première fois et celui de la deuxième fois
+                                const montantARendreCon = montantARendre.toFixed(2); //on transforme le total de ce qu'on a mis dans un nombre avec deux digits après la virgule
                                 console.log('Montant insuffisant. Veuillez récupérer votre argent : ' + montantARendreCon)
                                 break;
                                                  }
                                 else if(sousEnMoins>manque){ //si les sous qui manquent et qu'on a inséré sont plus que ce qui manque on rembourse le client 
-                                montantEnTrop = sousEnMoins-manque;
-                                console.log('Voici votre monnaie : '+ reste+'\nBoisson en cours de préparation. \nMerci de votre visite.\n')
+                                montantEnTrop = sousEnMoins-manque; //la somme qui est en trop quand on rajoute de la monnaie au montant qui manquait
+                                const montantEnTropCon = montantEnTrop.toFixed(2);
+                                console.log('Voici votre monnaie : '+ montantEnTropCon+'\nBoisson en cours de préparation. \nMerci de votre visite.\n')
                                                      }
                                 else{
                                 console.log('Boisson en cours de préparation. \nMerci de votre visite.\n')
                                     }
                         
-                
-                
                                         }
         
         
