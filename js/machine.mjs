@@ -36,17 +36,18 @@ console.log(response);
                 if(argent>montant){
                 let rendu=argent-montant;
                 const monnaie = rendu.toFixed(2);
-                console.log('Voici votre monnaie: '+monnaie+' euros')
-                console.log('Boisson en cours de préparation. \nMerci de votre visite.\n') 
+                console.log('Voici votre monnaie: '+monnaie+' euros');
+                console.log('Boisson en cours de préparation. \nMerci de votre visite.\n') ;
                                   }
                 else if(argent==montant){
                 console.log('Boisson en cours de préparation. \nMerci de votre visite.\n')
                                         }
                 else{
                 let rendu=argent-montant;
-                const monnaie = rendu.toFixed(2);  
-                console.log('Montant insuffisant, merci d\'introduire le montant nécessaire.')
-                ('Il manque :'+monnaie+'euros')
+                 
+                let monnaie = await sc.question('Montant insuffisant, merci d\'introduire le montant nécessaire.');
+                const monnaie = rendu.toFixed(2); 
+                console.log('Il manque :'+monnaie+'euros');
                 break;
                     }
         
