@@ -21,8 +21,8 @@ boisson.set("3", 'Chocolat chaud');
 
 
 
-while(qteGobelets>=1){
 
+do{
 let response = await sc.question('Composez le code de votre boisson: \n1 : Café \n2 : Thé  \n3 : Chocolad chaud'); 
 console.log(response);
 
@@ -43,12 +43,13 @@ console.log(response);
                 console.log('Boisson en cours de préparation. \nMerci de votre visite.\n')
                                         }
                 else{
-                let rendu=argent-montant;
-                 
-                let monnaie = await sc.question('Montant insuffisant, merci d\'introduire le montant nécessaire.');
-                const monnaie = rendu.toFixed(2); 
-                console.log('Il manque :'+monnaie+'euros');
-                break;
+                let manque=argent-montant;
+                const reste = manque.toFixed(2); 
+                manque = await sc.question('Montant insuffisant, merci d\'introduire le montant nécessaire : '+reste);
+                        
+                        
+                
+                
                     }
         
         
@@ -63,7 +64,9 @@ console.log(response);
         console.log("Code inexistant. Merci de composer votre code boisson.")
         }
 
-                        }
+                        
+
+     }while(qteGobelets>=1);
 
 console.log('Machine en attente de ravitaillement de gobelets. Merci de votre compréhension.');      
          
