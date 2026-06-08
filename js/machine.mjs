@@ -69,16 +69,14 @@ console.log(response);
                                     }
                         
                                         }
-        
-        
         qteGobelets = qteGobelets-1;   
-        console.log('Stock de gobelets restant : '+ qteGobelets);                                                }
+        console.log('Stock de gobelets restant : '+ qteGobelets);                                                
+                                                        }
 
         else{
         console.log("Code inexistant. Merci de composer votre code boisson.")
             }
-
-                                }
+                    }
 
 console.log('Machine en attente de ravitaillement de gobelets. Merci de votre compréhension.');      
          
