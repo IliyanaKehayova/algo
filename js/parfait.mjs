@@ -23,17 +23,19 @@ while(isNaN(response))
             for(i=1; i<=response; i++){
             result+=1;
             diviseur.push(i);
-            sum+=diviseur[i];
+            diviseur.forEach((el) => sum += el);
+            console.log(sum);                    
                                       }
-                if(response==sum+1){
-                console.log(response+' est un nombre parfait.');
-                                 }
-                else{
-                console.log(response+' n\'est pas un nombre parfait');
-                    }
-                                 
-                                          
-      
+                    
+                
+                            if(response==sum){
+                            console.log(sum)
+                            console.log(response+' est un nombre parfait.');
+                                            }
+                            else{
+                            console.log(response+' n\'est pas un nombre parfait');
+                                }
+                                            
 sc.close();
                     }
 await main()
