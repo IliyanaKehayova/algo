@@ -29,7 +29,6 @@ while(isNaN(response))
                     
                 
                             if(response==sum){
-                            console.log(sum)
                             console.log(response+' est un nombre parfait.');
                                             }
                             else{
