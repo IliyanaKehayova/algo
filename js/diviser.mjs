@@ -19,13 +19,14 @@ while(isNaN(response))
             for(let i=1; i<=response; i++){
                 
                 if(response%i==0){
-                result=+1;
-                diviseur.push(i);
-                console.log('Les nombres divisibles par '+response +' sont : '+diviseur);
+                //result+=1;
+                diviseur.push(i); }
+                                          }
+                console.log('Les nombres divisibles par '+response +' sont : ');
                 console.log(diviseur);
         
-                                }
-                                      }
+                                
+                                      
       
 sc.close();
                     }
