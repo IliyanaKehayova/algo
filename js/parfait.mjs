@@ -10,31 +10,25 @@ async function main(){
 const sc = new createInterface({input, output});
 
 let response;
-let result=0;
-let diviseur = [];
 let sum=0;
 let i;
 
-do{
 response = parseInt(await sc.question('Veuillez écrire un nombre')); 
 console.log(response);
-  }
-while(isNaN(response))
-            for(i=1; i<=response; i++){
-            result+=1;
-            diviseur.push(i);
-            diviseur.forEach((el) => sum += el);
-            console.log(sum);                    
-                                      }
-                    
-                
-                            if(response==sum){
-                            console.log(response+' est un nombre parfait.');
-                                            }
-                            else{
-                            console.log(response+' n\'est pas un nombre parfait');
-                                }
-                                            
+
+for(i=1; response%i==0; i++){ //a partir de 1 on va chercher tous les diviseurs du nombre (càd à chaque fois quand le modulo est à 0
+                if(response % i == 0){ // dans la boucle for on va prendre tous les diviseurs 
+                sum += i; //a chaque fois quand i correspond au calcul on rajoute le nombre au sum
+                                     }
+                            }
+                                if(sum==response){ //si la somme des diviseurs et le nombre qu'on a choisi sont égaux on peut dire qu'il s'agit d'un nombre parfait
+                                console.log(reponse+' est un nombre parfait.')
+                                                 }
+                                else{console.log(response+' n\'est pas un nombre parfait.')
+
+                                    }
+                                           
+                               
 sc.close();
                     }
 await main()
