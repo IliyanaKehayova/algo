@@ -22,7 +22,7 @@ response = parseInt(await sc.question('Veuillez écrire un nombre maximal'));
 console.log(response);    
 
 
-for(number=1; number<response; number++){ //tant que le nombre est inférieur à la reponse qu'on a choisi on continue la boucle for
+for(number=1; number<response; number++){ //on commence avec 1 et on incremente tant que le nombre est inférieur à la reponse qu'on a choisi on continue la boucle for
 let sum=0;
 
         for(i=1; number>i; i++){    //a partir de 1 on va chercher tous les diviseurs du nombre tant que le diviseur est plus petit que le nombre

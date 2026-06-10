@@ -8,7 +8,6 @@ async function main(){
 const sc = new createInterface({input, output});
 
 let response;
-let result=0;
 let diviseur = [];
 
 do{
@@ -16,10 +15,9 @@ response = parseInt(await sc.question('Veuillez écrire un nombre'));
 console.log(response);
   }
 while(isNaN(response))
-            for(let i=1; i<=response; i++){
+            for(let i=1; i<=response; i++){ //a partir de 1 on va chercher tous les diviseurs du nombre tant que le diviseur est plus petit que le nombre
                 
                 if(response%i==0){
-                //result+=1;
                 diviseur.push(i); }
                                           }
                 console.log('Les nombres divisibles par '+response +' sont : ');
