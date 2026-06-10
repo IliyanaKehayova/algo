@@ -11,35 +11,33 @@ async function main(){
 const sc = new createInterface({input, output});
 
 let response;
-var sum;
-var i;
-let nombres = [];
+let i;
+let numbers = [];
 var result=0;
+let number;
 
-  
-while(i>0 && i<response){
+
 
 response = parseInt(await sc.question('Veuillez écrire un nombre maximal')); 
 console.log(response);    
 
-    for(i=1; response>i; i--){ //a partir de 1 on va chercher tous les diviseurs du nombre (càd à chaque fois quand le modulo est à 0)
-                if(response % i == 0){ // dans la boucle for on va prendre tous les diviseurs 
-                    
-                    sum = sum + i; //à chaque fois quand i correspond au calcul on rajoute le nombre au sum
-                                     }
-                             }
-                        if(sum==response){ //si la somme des diviseurs et le nombre qu'on a choisi sont égaux on peut dire qu'il s'agit d'un nombre parfait
-                        //result+=1;
-                        nombres.push(sum);
-                                //if(sum<nombres){
-                                console.log('Les nombres divisibles parfaits en dessous de  '+response +' sont : '+nombres);
-                                console.log(nombres);
-                                               }
-                            
-                                         
-                                      
-                             
-                                            }     
+
+for(number=1; number<response; number++){ //tant que le nombre est inférieur à la reponse qu'on a choisi on continue la boucle for
+let sum=0;
+
+        for(i=1; number>i; i++){    //a partir de 1 on va chercher tous les diviseurs du nombre tant que le diviseur est plus petit que le nombre
+        
+                    if(number % i == 0){ //si le modulo du nombre est 0 on peut le compter comme diviseur
+                    sum = sum + i; //on additionne les diviseurs du nombre - i est le diviseur
+                                        }
+                                }                                   
+                        if(sum==number){ //si la somme des diviseurs est egale au nombre
+                        numbers.push(sum);  //on rajoute la somme (qui est egale au nombre càd c'est un nombre parfait) au tableau                    
+                                       }
+                                        }
+                                console.log('Les nombres divisibles parfaits en dessous de  '+response +' sont : ');
+                                console.log(numbers); //on affiche le tableau avec les nombres
+                                                                                                                     
 sc.close();
                     }
 await main()
