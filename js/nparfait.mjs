@@ -11,41 +11,35 @@ async function main(){
 const sc = new createInterface({input, output});
 
 let response;
-var sum=0;
+var sum;
 var i;
 let nombres = [];
 var result=0;
 
+  
+while(i>0 && i<response){
 
-
-do{
 response = parseInt(await sc.question('Veuillez écrire un nombre maximal')); 
-console.log(response);
-  }
-while(isNaN(response))
+console.log(response);    
 
-
-    for(i=1; response>i; i++){ //a partir de 1 on va chercher tous les diviseurs du nombre (càd à chaque fois quand le modulo est à 0)
+    for(i=1; response>i; i--){ //a partir de 1 on va chercher tous les diviseurs du nombre (càd à chaque fois quand le modulo est à 0)
                 if(response % i == 0){ // dans la boucle for on va prendre tous les diviseurs 
                     
                     sum = sum + i; //à chaque fois quand i correspond au calcul on rajoute le nombre au sum
-                
                                      }
                              }
                         if(sum==response){ //si la somme des diviseurs et le nombre qu'on a choisi sont égaux on peut dire qu'il s'agit d'un nombre parfait
                         //result+=1;
                         nombres.push(sum);
-                                if(sum<nombres){
+                                //if(sum<nombres){
                                 console.log('Les nombres divisibles parfaits en dessous de  '+response +' sont : '+nombres);
-                                console.log(diviseur);
+                                console.log(nombres);
                                                }
                             
-                                         }
-                        else{console.log('blabla.')
-
-                                    }               
+                                         
+                                      
                              
-                               
+                                            }     
 sc.close();
                     }
 await main()
