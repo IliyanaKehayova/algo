@@ -23,13 +23,38 @@ async function main(){
 const sc = new createInterface({input, output});
 
 
-let response = parseInt(await sc.question('Veuillez saisir un nombre.')); 
-console.log(response);
+let taux;
+let n=4;
+let I;
+let VR;
+let flux=[];
+let i;
+let CF;
+let VAN;
 
 
+taux = parseFloat(await sc.question('Quel est le taux d\'investissement ?')); 
+console.log(taux);
+
+I = parseFloat(await sc.question('Quel est le taux d\'actualisation ?')); 
+console.log(I);
+
+for(i=1; i<=4; i++){
+CF = parseFloat(await sc.question('Quel est le cash-flow pour l\'année CF'+(i)));
+console.log(CF);
+flux.push(CF); 
+                  }
+
+//console.log(flux[0]);
+
+VR = parseFloat(await sc.question('Quelle est la valeur résiduelle ?')); 
+console.log(VR);
 
 
+VAN = -I + (flux[0]/(1+i)) +  Math.pow(2, flux[0]/(1+i)) + Math.pow(3, flux[0]/(1+i)) + Math.pow(4, flux[0]/(1+i)) + Math.pow(5, VR/(1+i));
 
+console.log('La valeur actualisée net est de :')
+console.log(VAN);
 
 
 
