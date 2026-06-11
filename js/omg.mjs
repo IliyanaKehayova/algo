@@ -47,7 +47,7 @@ console.log('La valeur actualisée net VAN est de :')
 console.log(VAN.toFixed(2));
 let calcul = I - VAN; 
 //let TRI = 0.20977
-console.log(calcul)
+//console.log(calcul)
 
 
 //console.log(VAN, I, n, VR, taux);
