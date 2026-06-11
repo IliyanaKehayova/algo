@@ -33,10 +33,10 @@ let CF;
 let VAN;
 
 
-taux = parseFloat(await sc.question('Quel est le taux d\'actualisation ? (format 00.00)')); 
+taux = parseFloat(await sc.question('Quel est le taux d\'investissement ?')); 
 console.log(taux);
 
-I = parseFloat(await sc.question('Quel est l\'investissement (capital) ?')); 
+I = parseFloat(await sc.question('Quel est le taux d\'actualisation ?')); 
 console.log(I);
 
 for(i=1; i<=n; i++){
@@ -51,16 +51,13 @@ VR = parseFloat(await sc.question('Quelle est la valeur résiduelle ?'));
 console.log(VR);
 
 
-//VAN = -I + (flux[0]/(1+taux)) +  (flux[1]/Math.pow((1+taux), 2)) + (flux[2]/Math.pow((1+taux), 3)) + (flux[3]/Math.pow((1+taux), 4)) + (VR/Math.pow((1+taux), 5));
+VAN = -I + (flux[0]/(1+i)) +  Math.pow(2, flux[0]/(1+i)) + Math.pow(3, flux[0]/(1+i)) + Math.pow(4, flux[0]/(1+i)) + Math.pow(5, VR/(1+i));
 
-
-VAN = -I; 
-for(i=0; i<=3; i++){ //on commence par i=1 et jusqu'à ce qu'on attent la taille du tableau càd 4 on incrémente
-VAN += flux[i]/(Math.pow(1+taux, i+1)); //le VAN contient déjà le -I, on va rajouter l'incrémentation des blocs CF, 
-                             }
-VAN += VR/(Math.pow(1+taux, 5)); // on rajoute le bloc VR à VAN
-
-
+VAN = -I;
+for(i=0; i<flux.length; i++){ // vu qu'il n'y a que 4 entrees la boucle se fera jusqu'à la 4eme annee
+    VAN+=flux[i] / Math.pow(1+taux, i+1); //vu que flux réélement a juste 4 chiffres - années 1, 2, 3 et 4 on doit à chauqe fois faire la boucle et incrémenter tout ce qu'il y a après VAN+= et ça va s'arrêter à 4, donc la 4eme annee.
+                            }
+VAN += VR / Math.pow(1+taux, 5); //la formule VAR reste la même
 console.log('La valeur actualisée net est de :')
 console.log(VAN);
 //console.log(VAN, I, n, VR, taux);
