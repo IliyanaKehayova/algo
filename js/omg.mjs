@@ -45,7 +45,7 @@ for(i=0; i<=flux.lenght; i++){ // vu qu'il n'y a que 4 entrees la boucle se fera
 VAN += VR / Math.pow(1+taux, 5); //la formule VAR reste la même
 console.log('La valeur actualisée net VAN est de :')
 console.log(VAN.toFixed(2));
-let calcul = I - VAN; 
+//let calcul = I - VAN; 
 //let TRI = 0.20977
 //console.log(calcul)
 
