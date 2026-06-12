@@ -24,7 +24,6 @@ else{console.log('404 not found.')
     }
                                 
 
-
 sc.close();
                     }
 await main()
