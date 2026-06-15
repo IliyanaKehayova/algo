@@ -30,7 +30,6 @@ let temp = await sc.question('Saisir une température avec son unité de mesure 
 console.log(temp);
 
 let newtemp;
-let newnewtemp;
 let substringToRemove;
 let subsubstringToRemove;
 let result;
@@ -42,8 +41,8 @@ console.log(parseFloat(newtemp));
                       }
 else if(temp.includes("F")){
 subsubstringToRemove = " F";
-newnewtemp = temp.replace(subsubstringToRemove, '');
-console.log(parseFloat(newnewtemp));
+newtemp = temp.replace(subsubstringToRemove, '');
+console.log(parseFloat(newtemp));
                            }
 
 /*
@@ -64,8 +63,8 @@ celsiusOrFarenheit.set("F", farenheitToCelsius);
 
 
         if(temp.includes("C")){ //si l'entrée temp contient la lettre C
-        let result = (newtemp/(5/9))+32;
-                if(newtemp<=-459.67){
+        let result = (newtemp*5/9)+32;
+                if(newtemp<=-273.15){
                 console.log(temp+' est égal au zéro absolu en Farenheit.')
                                    }
                 else if(newtemp>=5000000){
@@ -78,11 +77,11 @@ celsiusOrFarenheit.set("F", farenheitToCelsius);
                               }
 
         else if(temp.includes("F")){ //si l'entrée temp contient la lettre F
-        let result = (newnewtemp-32)*(5/9);  
-                if(newnewtemp<=-273.15){
+        result = (newtemp-32)*(5/9);  
+                if(newtemp<=-459.67){
                 console.log(temp+' est égal au zéro absolu en Celsius.')
                                   }
-                else if(newnewtemp>=5000000){
+                else if(newtemp>=5000000){
                 console.log(temp+' ne peut pas dépasser 5 000 000°.')
                                         }
                 else{
