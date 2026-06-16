@@ -16,8 +16,8 @@ async function main(){
 const sc = new createInterface({input, output});
 
 let numberOfA = 0;
-let character = "a";
-//let lettersTable = [];
+let letter = "a";
+let lettersTable = [];
 
 
 let response = await sc.question('Composez une phrase qui se termine par un "."'); 
@@ -38,23 +38,22 @@ console.log('La chaîne de caractéres ne contient pas un ".".')
     }
 
 
-for(let i=0; i<response.lenght; i++){
-    if(response.includes(character)){
+for(let item of response){ //on parcourt la longueur du string
+    if(item === letter){ //partout où ça répond à la fonction on incremente le nombre de A
+    lettersTable.push(letter)
     numberOfA++;
-    console.log('Cette chaîne de caractéres contient la lettre a '+numberOfA+ ' fois.')
-                                }
-                                
-    else{
-    console.log('Cette chaîne de lettres ne contient pas la lettre a.')
-        }                           
-                                    }
+                    }
+                              
+                        }
+console.log('Cette chaîne de caractéres contient la lettre a '+numberOfA+ ' fois.');
+
 
 sc.close();
                      }
 
 
-    function checkLetter(letter) {
-    if (letter=="a"){
+    function checkLetter(letter, response) {
+    if (response.includes(letter)){
       return true;
                     }
     return false;
