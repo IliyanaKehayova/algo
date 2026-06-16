@@ -16,46 +16,42 @@ async function main(){
 const sc = new createInterface({input, output});
 
 let numberOfA = 0;
-let letter = "a";
-let lettersTable = [];
+
 
 
 let response = await sc.question('Composez une phrase qui se termine par un "."'); 
 console.log(response);
+
+let letter = await sc.question("Quelle lettre voulez-vous rechercher ? ");
+console.log(letter);
 //let allLetters = response.split("");
 //lettersTable.push(allLetters);
 
 
-if(response==""){
+if(response==="" || response==="."){
 console.log('La chaîne est vide.')    
-                }
+                                  }
+else if(!response.endsWith(".")) {
+    console.log('La chaîne de caractères doit se terminer par un "."');
+                                 } 
 
-if(response.includes(".")){
-console.log('La chaîne de caractéres contient un ".".')
-                        }
 else{
-console.log('La chaîne de caractéres ne contient pas un ".".')
+for (let item of response) {
+    if (item === letter) {
+        numberOfA++;
+                         }
+                          }
+
+
+  if (numberOfA === 0) {
+    console.log("La lettre n'est pas présente.");
+                        } 
+  else {
+    console.log("Cette chaîne contient la lettre " + letter + " " +numberOfA +" fois.");
+        }
+
     }
-
-
-for(let item of response){ //on parcourt la longueur du string
-    if(item === letter){ //partout où ça répond à la fonction on incremente le nombre de A
-    lettersTable.push(letter)
-    numberOfA++;
-                    }
-                              
-                        }
-console.log('Cette chaîne de caractéres contient la lettre a '+numberOfA+ ' fois.');
-
-
 sc.close();
                      }
-
-
-    function checkLetter(letter, response) {
-    if (response.includes(letter)){
-      return true;
-                    }
-    return false;
-                                 }
+                                 
 await main()
