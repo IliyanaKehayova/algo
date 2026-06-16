@@ -15,11 +15,48 @@ import{stdin as input, stdout as output} from 'node:process';
 async function main(){
 const sc = new createInterface({input, output});
 
+let numberOfA = 0;
+let character = "a";
+//let lettersTable = [];
 
 
+let response = await sc.question('Composez une phrase qui se termine par un "."'); 
+console.log(response);
+//let allLetters = response.split("");
+//lettersTable.push(allLetters);
 
 
+if(response==""){
+console.log('La chaîne est vide.')    
+                }
+
+if(response.includes(".")){
+console.log('La chaîne de caractéres contient un ".".')
+                        }
+else{
+console.log('La chaîne de caractéres ne contient pas un ".".')
+    }
+
+
+for(let i=0; i<response.lenght; i++){
+    if(response.includes(character)){
+    numberOfA++;
+    console.log('Cette chaîne de caractéres contient la lettre a '+numberOfA+ ' fois.')
+                                }
+                                
+    else{
+    console.log('Cette chaîne de lettres ne contient pas la lettre a.')
+        }                           
+                                    }
 
 sc.close();
+                     }
+
+
+    function checkLetter(letter) {
+    if (letter=="a"){
+      return true;
                     }
+    return false;
+                                 }
 await main()
