@@ -35,10 +35,25 @@ async function main() {
               nosformations['ISI']=4;
               
               
-    nosformations.sort(  );
+  
     console.log(nosformations);
     console.table(nosformations);
     console.log(afficherchaine(nosformations));
+
+
+    let sortable = [];
+    for (var element in nosformations) {
+    sortable.push([element, nosformations[element]]);
+                                    }
+
+    sortable.sort(function(a, b) {
+    return a[1] - b[1];
+                                 });
+
+    console.log(sortable);
+
+
+
 
     sc.close();
 }
@@ -54,5 +69,11 @@ function afficherchaine(objet) {
     tabaffichage=tabaffichage.substring(0,tabaffichage.length-1);        
     tabaffichage+="]";
     return tabaffichage;
-}
+                              }
+   /* function compareNumbers(a, b, nosformations){
+    return a - b;
+                                 }*/
+
+    
+
 await main();
