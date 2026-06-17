@@ -11,7 +11,7 @@ Sinon, affichez le nombre de personnes pour chaque catégorie (« - de 20, + de 
 import { createInterface } from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
 async function main() {
-  const sc = new createInterface({ input, output });
+const sc = new createInterface({ input, output });
 
   let tableSize = 19;
   let ageTable = [];
@@ -21,28 +21,28 @@ async function main() {
   let entry;
 
   for (let i = 0; i <= tableSize; i++) {
-    // ici on va rentrer manuellement les âges de 20 personnes
-     ageTable.push(parseInt(await sc.question("Veuillez saisir l'âge de la personne n°" + (i + 1) +": ")));
+  // ici on va rentrer manuellement les âges de 20 personnes - vu qu'on pose la même question 20 fois on va utiliser la boucle for
+  ageTable.push(parseInt(await sc.question("Veuillez saisir l'âge de la personne n°" + (i + 1) +": ")));
                                        }
 
  
   console.log("Voici les âges de toutes les personnes de la liste :");
-  console.log(ageTable);
+  console.log(ageTable); //On affiche la liste
 
 
-  for(let i=0; i<ageTable.length; i++){
-  
-  if(checkAge(ageTable[i])==true){
-  juniorAgeTable++;
+  for(let i=0; i<ageTable.length; i++){ //On va parcourir tout le tableau des ages des personnes
+   
+  if(checkAge(ageTable[i])==true){ // en utilisant la fonction pour vérifier si <20 ans si ça répond au critéres de la fonction ça renvoie true 
+  juniorAgeTable++; // on rajoute toutes les personnes qui répondent à ce critére à une nouvelle liste juniorAgeTable
                                  }
                                       }
 
-  console.log(juniorAgeTable);
+  //console.log(juniorAgeTable); // CA MARCHE PASOn affiche la liste des personnes qui ont <20 ans 
 
-  if(juniorAgeTable==0){
+  if(juniorAgeTable==0){ //Si la liste est vide on affiche que toutes les personnes dans la première liste ont plus de 20 ans
     console.log('TOUTES LES PERSONNES ONT PLUS DE 20 ANS')
                        }
-  else if(juniorAgeTable==ageTable.lenght){
+  else if(juniorAgeTable==ageTable.lenght){ //
     console.log('TOUTES LES PERSONNES ONT MOINS DE 20 ANS');
                                           }
   else{console.log('Il y a '+ juniorAgeTable+' personnes qui ont moins de 20 ans et : '+(ageTable.length-juniorAgeTable)+' de personnes âgées de plus de 20 ans.\n');
@@ -55,7 +55,7 @@ async function main() {
   sc.close();
                       }
 
-function checkAge(age) {
+function checkAge(age) { //fonction pour vérifier l'âge de la personne 
     if ( age<= 20){
       return true;
                   }
