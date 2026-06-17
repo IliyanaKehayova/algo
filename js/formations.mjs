@@ -42,18 +42,23 @@ async function main() {
 
 
     let sortable = [];
-    for (var element in nosformations) {
-    sortable.push([element, nosformations[element]]);
+    for (var key in nosformations) {
+    sortable.push([key, nosformations[key]]);
                                     }
 
     sortable.sort(function(a, b) {
-    return a[1] - b[1];
+    return  b[1] -a[1];
                                  });
 
     console.log(sortable);
 
-
-
+      let newtraining={};
+      for (let i = 0; i < sortable.length; i++) {
+       
+        newtraining[sortable[i][0]]= sortable[i][1]
+        
+      }                           
+console.table(newtraining);
 
     sc.close();
 }
