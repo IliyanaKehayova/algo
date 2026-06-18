@@ -13,6 +13,8 @@ const sc = new createInterface({input, output});
 
 let word;
 let guess;
+let attempts=0;
+let maxAttempts=6;
 
 let wordTable = [];
 let hiddenWordTable = [];
@@ -35,26 +37,40 @@ hiddenWordTable.push("_");
 
 console.log(hiddenWordTable.join());
 
-for(let i=0; i=5; i++){
+
 while(hiddenWordTable.includes("_")){
-            let guess = await sc.question('Veuillez choisir une lettre : ');
+        guess = await sc.question('Veuillez choisir une lettre : ');
+        let found = false;
 
+                
                     for(let i=0; i<wordTable.length; i++){
-                        if(wordTable[i].includes(guess)){
-                        hiddenWordTable=hiddenWordTable.with(i, guess);
+                        if(wordTable[i]===(guess)){
+                        hiddenWordTable[i]=guess;
+                        found=true;
+                        console.log('Il vous restent '+maxAttempts-attempts+' de deviner.')
+                        attempts++;
                                                         }
+                        /*else if(!wordTable[i].includes(guess)){
+                        console.log("Le mot ne contient pas cette lettre, veuillez réessayer.")
+                        break;
+                                                              }*/
+                    if(!found){
+                        console.log('Il vous restent '+maxAttempts-attempts+' de deviner.')
+                        attempts++;
+                    
+                    }
+                                                        
+                                                        }
+                        console.log(hiddenWordTable.join());
+                                    
 
-                                                        }
-console.log(hiddenWordTable.join());
+
                                     }
-
-
-                                                     }
                   
 if(!hiddenWordTable.includes("_")){
 console.log('Félicitation, vous avez trouvé le mot !');
 console.log(hiddenWordTable.join());
-                                    }
+                                  }
 else if(hiddenWordTable.includes("_")){
 console.log('Dommage, le mot était "'+word+'". Veuillez réessayer une autre fois.')
                                       }                                    
