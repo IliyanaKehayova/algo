@@ -41,21 +41,22 @@ async function main() {
     console.log(afficherchaine(nosformations));
 
 
-    let sortable = [];
-    for (var key in nosformations) {
-    sortable.push([key, nosformations[key]]);
+    let sortable = []; //on créé notre nouveau tableau
+    for (var key in nosformations) { //on va parcourir tout le tableau nosformations
+    sortable.push([key, nosformations[key]]); //on va rajouter tous les elements du tableau nos formations à sortable. key corespond à la premiere valeur et nosformations[key] à la valeur
                                     }
 
-    sortable.sort(function(a, b) {
-    return  b[1] -a[1];
-                                 });
+    sortable.sort(function(a, b) { //on fait le tri du tableau sortable en appliquant la fonction 
+    return  b[1] -a[1]; // 1 corespond aux valeurs dans la deuxième colonne où quand a la première valeur, càd si b est plus grand que a il passe au dessus donc ça fait une liste décroissante
+                                 }
+                 );
 
     console.log(sortable);
 
       let newtraining={};
-      for (let i = 0; i < sortable.length; i++) {
+      for (let i = 0; i < sortable.length; i++) { //on parcourt tout le tableau sortable 
        
-        newtraining[sortable[i][0]]= sortable[i][1]
+        newtraining[sortable[i][0]]= sortable[i][1] //on remet 
         
       }                           
 console.table(newtraining);
