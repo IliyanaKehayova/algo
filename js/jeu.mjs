@@ -12,74 +12,90 @@ async function main(){
 const sc = new createInterface({input, output});
 
 let word;
-let guess;
-let attempts=0;
-let maxAttempts=6;
+    let guess;
+    let attempts = 0;
+    const maxAttempts = 6;
 
-let wordTable = [];
-let hiddenWordTable = [];
+    let wordTable = [];
+    let hiddenWordTable = [];
+    let guessedLetters = [];
 
-do{word = await sc.question('Veuillez choisir un mot de minimum 5 caractères à deviner pour le joueur n°2.')
-//console.log(word);
-  }
-while(word.length<5);
+    // Choix du mot (minimum 5 caractères)
+    do {
+        word = await sc.question(
+            "Veuillez choisir un mot de minimum 5 caractères à deviner pour le joueur n°2 : "
+        );
+    } while (word.length < 5);
 
+    // Transformation du mot en tableau
+    for (let i = 0; i < word.length; i++) {
+        wordTable.push(word[i]);
+    }
 
-for (let i=0; i<word.length; i++){
-wordTable.push(word[i]);
-                        }
-//console.log(wordTable);
-//let tableLength = console.log(wordTable.length);
+    // Création du mot caché
+    for (let i = 0; i < wordTable.length; i++) {
+        if (i === 0 || i === wordTable.length - 1) {
+            hiddenWordTable.push(wordTable[i]);
+        } else {
+            hiddenWordTable.push("_");
+        }
+    }
 
-for(let i=0; i<wordTable.length; i++){
-hiddenWordTable.push("_");
-                                     };
+    console.log(hiddenWordTable.join(" "));
 
-console.log(hiddenWordTable.join());
+    // Boucle principale
+    while (hiddenWordTable.includes("_") && attempts < maxAttempts) {
 
+        guess = await sc.question("Veuillez choisir une lettre : ");
 
-while(hiddenWordTable.includes("_")){
-        guess = await sc.question('Veuillez choisir une lettre : ');
+        // Vérifie si la lettre a déjà été proposée
+        if (guessedLetters.includes(guess)) {
+            console.log("Vous avez déjà proposé cette lettre !");
+            continue;
+        }
+
+        guessedLetters.push(guess);
+
         let found = false;
 
-                
-                    for(let i=0; i<wordTable.length; i++){
-                        if(wordTable[i]===(guess)){
-                        hiddenWordTable[i]=guess;
-                        found=true;
-                        console.log('Il vous restent '+maxAttempts-attempts+' de deviner.')
-                        attempts++;
-                                                        }
-                        /*else if(!wordTable[i].includes(guess)){
-                        console.log("Le mot ne contient pas cette lettre, veuillez réessayer.")
-                        break;
-                                                              }*/
-                    if(!found){
-                        console.log('Il vous restent '+maxAttempts-attempts+' de deviner.')
-                        attempts++;
-                    
-                    }
-                                                        
-                                                        }
-                        console.log(hiddenWordTable.join());
-                                    
+        // Recherche de la lettre dans le mot
+        for (let i = 0; i < wordTable.length; i++) {
 
+            if (wordTable[i] === guess) {
+                hiddenWordTable[i] = guess;
+                found = true;
+            }
 
-                                    }
-                  
-if(!hiddenWordTable.includes("_")){
-console.log('Félicitation, vous avez trouvé le mot !');
-console.log(hiddenWordTable.join());
-                                  }
-else if(hiddenWordTable.includes("_")){
-console.log('Dommage, le mot était "'+word+'". Veuillez réessayer une autre fois.')
-                                      }                                    
+        }
 
-//let hiddenWord = word.replaceAll(word, "_");
-//console.log(hiddenWord);
+        if (found) {
+            console.log("Bonne réponse !");
+        } else {
+            attempts++;
+            console.log("Cette lettre n'est pas dans le mot.");
+            console.log(
+                "Il vous reste " +
+                (maxAttempts - attempts) +
+                " essai(s)."
+            );
+        }
 
-                
-      
-sc.close();
-                    }
-await main()
+        console.log(hiddenWordTable.join(" "));
+        console.log(
+            "Lettres déjà proposées : " +
+            guessedLetters.join(", ")
+        );
+    }
+
+    // Résultat final
+    if (!hiddenWordTable.includes("_")) {
+        console.log("Félicitations, vous avez trouvé le mot !");
+    } else {
+        console.log("Vous avez perdu.");
+        console.log('Le mot était : "' + word + '"');
+    }
+
+    sc.close();
+}
+
+await main();
