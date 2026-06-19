@@ -10,16 +10,54 @@ import{stdin as input, stdout as output} from 'node:process';
 async function main(){
 const sc = new createInterface({input, output});
 
-let palindrome = await sc.question('Veuillez saisir un palindrome.');
+let palindrome;
+let wordTable = [];
+let firstPartOfWord = [];
+let secondPartOfWord = [];
+
+
+palindrome = await sc.question('Veuillez saisir un palindrome.');
+
+while(palindrome===null){
+console.log('Vous n\'avez pas saisi de mot.'); 
+palindrome = await sc.question('Veuillez saisir un palindrome.'); //on va saisir le palindrome
+                        }
+
 console.log(palindrome);
 
+for (let i = 0; i < palindrome.length; i++) //on va parcourir tous les caracteres 
+{wordTable.push(palindrome[i]);} //et les mettre dans un tableau 
 
 
+console.log(wordTable);
+let wordTableLength = wordTable.length-1;
+console.log(wordTableLength);
 
 
+for(let i=0; i<wordTable.length; i++){
+//        if(wordTable[i] === wordTable[wordTableLength]){ 
+//            console.log(wordTable[i]+ ' est la même lettre que '+wordTable[wordTableLength]);
+            wordTableLength--; 
+            firstPartOfWord.push(wordTable[i]);
+            secondPartOfWord.push(wordTable[wordTableLength+1])
+//                                                       } 
+                                     }
+console.log(firstPartOfWord);
+console.log(secondPartOfWord);
 
 
+let joinedFirstPartOfWord = firstPartOfWord.join(" ");
+let joinedSecondPartOfWord = secondPartOfWord.join(" ");
 
+console.log(joinedFirstPartOfWord);
+console.log(joinedSecondPartOfWord);
+
+if(joinedFirstPartOfWord===joinedSecondPartOfWord){
+console.log('Le mot '+ palindrome +' est un palindrome.')
+                                      }
+else{
+console.log('Le mot '+ palindrome +' n\'est pas un palindrome.')
+                                            }
 sc.close();
                     }
 await main()
