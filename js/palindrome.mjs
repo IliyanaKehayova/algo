@@ -18,7 +18,7 @@ let secondPartOfWord = [];
 
 palindrome = await sc.question('Veuillez saisir un palindrome.');
 
-while(palindrome===null){
+while(palindrome.length===0){
 console.log('Vous n\'avez pas saisi de mot.'); 
 palindrome = await sc.question('Veuillez saisir un palindrome.'); //on va saisir le palindrome
                         }
@@ -37,9 +37,10 @@ console.log(wordTableLength);
 for(let i=0; i<wordTable.length; i++){
 //        if(wordTable[i] === wordTable[wordTableLength]){ 
 //            console.log(wordTable[i]+ ' est la même lettre que '+wordTable[wordTableLength]);
-            wordTableLength--; 
+            
             firstPartOfWord.push(wordTable[i]);
-            secondPartOfWord.push(wordTable[wordTableLength+1])
+            secondPartOfWord.push(wordTable[wordTableLength])
+            wordTableLength--; 
 //                                                       } 
                                      }
 console.log(firstPartOfWord);
