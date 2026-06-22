@@ -24,6 +24,7 @@ let guessedLetters = []; //le tableau avec toutes les lettres qu'on a déjà tap
 do {word = await sc.question("Veuillez choisir un mot de minimum 5 caractères à deviner pour le joueur n°2 : ");} // le premier joueur tape le mot à deviner
 while (word.length < 5);
 
+
     
 for (let i = 0; i < word.length; i++) //on va parcourir la longueur du mot
 {wordTable.push(word[i]);} //on va inserer tous les caractères du mot dans le tableau wordTable
@@ -43,10 +44,11 @@ guess = await sc.question("Veuillez choisir une lettre : "); //la lettre qu'on p
 
         if(guessedLetters.includes(guess)) { //si on a déjà proposé la même lettre càd elle figure dans le tableau guessedLetters
             console.log("Vous avez déjà proposé cette lettre !");
-            continue;
+            continue; //on continue et on s'arrête pas ici
                                             }
 
         guessedLetters.push(guess); // on a fermé la boucle if d'avant donc ici si dès qu'on propose une lettre on la rajoute au tableau guessedWords
+        
         let found = false; //on introduit une varible found 
 
         for(let i = 0; i < wordTable.length; i++){ //on va parcourir le tableau wordTable
@@ -60,6 +62,7 @@ guess = await sc.question("Veuillez choisir une lettre : "); //la lettre qu'on p
 
         if (found){ //si on trouve la lettre
             console.log("Bonne réponse !");
+            console.log("Il vous reste " +(maxAttempts - attempts) +" essai(s).");
             attempts++; //on va incrementer le nombre d'essais
                   } 
         else{
