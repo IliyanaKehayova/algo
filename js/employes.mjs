@@ -19,43 +19,51 @@ import { stdin as input, stdout as output } from "node:process";
 
 
 async function loadData() {
-let response = await fetch("https://arfp.github.io/tp/web/javascript2/03-employees/employees.json");
-let data = await response.json();
-console.log(data);
 
-const [firstName, ...lastNameParts] = data.employee_name.split(" ");
-const lastName = lastNameParts.join(" ").toLowerCase();
-const email = `${firstName[0].toLowerCase()}.${lastName}@email.com`;
-const year_of_birth = 2026-data.employee_age;
-const income_monthly = data.employee_salary*12;
+    let response = await fetch(
+        "https://arfp.github.io/tp/web/javascript2/03-employees/employees.json"
+    );
 
-const employee = data.data.map((data)=>{
+    let data = await response.json();
 
-return{
-id: data.id,
-full_name: data.employee_name,
-email: email,
-year_of_birth : year_of_birth,
-profile_image : data.profile_image,
+    const employees = data.data.map((emp) => {
+
+        const [firstName, ...lastNameParts] =
+            emp.employee_name.split(" ");
+
+        const lastName =
+            lastNameParts.join("").toLowerCase();
+
+        const email =
+            `${firstName[0].toLowerCase()}.${lastName}@email.com`;
+
+        const income_monthly =
+            emp.employee_salary / 12;
+
+        const year_of_birth =
+            2026 - emp.employee_age;
+
+        return {
+
+            id: emp.id,
+
+            full_name: emp.employee_name,
+
+            email: email,
+
+            income_monthly: income_monthly,
+
+            year_of_birth: year_of_birth
+
+        };
+
+    });
+
+    console.table(employees);
 
 }
 
-}
-
-
-)
-
-
-let sortable = []; 
-for (var key in data) { 
-sortable.push([key, data[key]]); 
-                                    }
-console.table(sortable);
-
-
-
-
-
+loadData();
 /*var result = [];
 
 for (var key in data) { 
@@ -148,7 +156,5 @@ console.table()*/
 
 
 
-}
 
-loadData();
 
