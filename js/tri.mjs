@@ -9,8 +9,6 @@ async function main() {
 const sc = new createInterface({ input, output });
 
 let numbers = [];
-let newNumbers = [];
-let smallestIndex;
 
 do{
 let number = parseInt(await sc.question('Veuillez entrer 5 nombres dans le tableau.'));
@@ -22,19 +20,19 @@ while(numbers.length<=4);
 console.table(numbers);
 
 console.log(Math.min(...numbers));
-smallestIndex = Math.min(...numbers);
-console.log(smallestIndex);
+let smallestIndex = Math.min(...numbers); //nous donne le plus petit nombre dans toute la table 
 
-for(let i=0; i<=numbers.length; i++){
-    let indexMin=i;
-    for (let j=i; j<numbers.length; j++){
-        if(numbers[j] <numbers[indexMin]){
-            indexMin=j; 
+
+for(let i=0; i<=numbers.length; i++){ // on va d'abord parcourir le tableau numbers avec eles nombres qu'on a choisi
+    let indexMin=i; // on va définir une valeur minimale qui va dépendre de i
+    for (let j=i; j<numbers.length; j++){ // dnas la première boucle avec i on rajoute une deuxième variable j qui parcourt le même tableau
+        if(numbers[j] <numbers[indexMin]){  //si le j est inférieur à l'indexMin qui incremente en fonction du i
+            indexMin=j;  //indexMin devient j
                                          }
                                        }
 
-        if(indexMin !==i){
-            const temp = numbers[i];
+        if(indexMin !==i){ //si la valeur minimale n'est pas égale à i 
+            const temp = numbers[i]; //on fait la manip qui inverse les deux valeurs
             numbers[i] = numbers[indexMin];
             numbers[indexMin] = temp;
                          }                               
