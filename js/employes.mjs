@@ -23,12 +23,36 @@ let response = await fetch("https://arfp.github.io/tp/web/javascript2/03-employe
 let data = await response.json();
 console.log(data);
 
+const [firstName, ...lastNameParts] = data.employee_name.split(" ");
+const lastName = lastNameParts.join(" ").toLowerCase();
+const email = `${firstName[0].toLowerCase()}.${lastName}@email.com`;
+const year_of_birth = 2026-data.employee_age;
+const income_monthly = data.employee_salary*12;
+
+const employee = data.data.map((data)=>{
+
+return{
+id: data.id,
+full_name: data.employee_name,
+email: email,
+year_of_birth : year_of_birth,
+profile_image : data.profile_image,
+
+}
+
+}
+
+
+)
+
 
 let sortable = []; 
 for (var key in data) { 
 sortable.push([key, data[key]]); 
                                     }
 console.table(sortable);
+
+
 
 
 
