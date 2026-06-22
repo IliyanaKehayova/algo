@@ -16,14 +16,115 @@ year_of_birth:1965
 
 import { createInterface } from "node:readline/promises";
 import { stdin as input, stdout as output } from "node:process";
-async function main() {
-const sc = new createInterface({ input, output });
+
+
+async function loadData() {
+let response = await fetch("https://arfp.github.io/tp/web/javascript2/03-employees/employees.json");
+let data = await response.json();
+console.log(data);
+
+
+let sortable = []; 
+for (var key in data) { 
+sortable.push([key, data[key]]); 
+                                    }
+console.table(sortable);
+
+
+
+/*var result = [];
+
+for (var key in data) { 
+result.push([key, data[key]]); 
+                                    }
+
+console.table(result);*/
+  
+/*
+function json2array(data){
+    
+    var keys = Object.entries(data);
+    keys.forEach(function(key){
+    result.push(data[key]);
+    });
+    return result;
+}
+console.table(result);
+*/
+
+
+    
+
+//const workers = await fetch('https://arfp.github.io/tp/web/javascript2/03-employees/employees.json');
+//const json = await Response.json();
+//console.log(JSON.stringify(json));
+
+/*async function getData() {
+  const url = "https://arfp.github.io/tp/web/javascript2/03-employees/employees.json";
+  try {
+    const reponse = await fetch(url);
+    if (!reponse.ok) {
+      throw new Error(`Statut de réponse : ${reponse.status}`);
+    }
+
+    const resultat = await reponse.json();
+    console.log(resultat);
+  } catch (erreur) {
+    console.error(erreur.message);
+  }
+}
+
+console.table()*/
+
+
+//console.table(workers);
+
+//const workersArray = Object.entries(workers);
+//console.log(workersArray);
+
+/*for (let i=0; i<workersArray.length; i++){
+    console.log(workersArray[i]);
+}*/
+
+//console.table(workersArray);
+
+
+//const values = Object.values(workers);
+//console.log(values);
+
+//const entries = Object.entries(workers);
+
+/*for(const [key, value] of entries){
+    console.log(key);
+    console.log(value);
+}*/
+
+/*for(let key in workers){
+    console.log(key);
+    console.log(workers[key]);
+                   };*/
+
+//console.log(entries);
+
+
+/*for(const key in workers){
+    if (workers.hasOwnProperty(key)){
+    console.log(workers[key]);
+                                    }
+                         }*/
 
 
 
 
+/*function getId(){
+    const id = [...this.id];
+    let myString = `${this.employee_name} has an id of ${getId}`;
+    getId.forEach(())
+}*/
 
 
-sc.close();                    
-                      }              
-await main();
+
+}
+
+loadData();
+
