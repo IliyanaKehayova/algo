@@ -11,27 +11,15 @@ const catDataBase = JSON.parse(data);
 console.table(catDataBase);
 
 
-const catMap = catDataBase.map((cats) => {
-return{
-
-cat_id: cats.cat_id,
-cat_name: cats.cat_name,
-cat_microchip_number: cats.cat_microchip_number,
-cat_age: cats.cat_age,
-cat_gender: cats.cat_gender,
-cat_race: cats.cat_race,
-cat_fur_colors: cats.cat_fur_colors,
-}
-});
-
+const catMap = catDataBase;
 console.table(catMap);
 
 
 console.log("La SPA de Mulhouse a actuellement "+catMap.length + " chats :");
 
 
-catMap.forEach(cats => {
-console.log("ID : "+cats.cat_id+" | Nom : "+cats.cat_name);
+catMap.forEach(cat => {
+console.log("ID : "+cat.cat_id+" | Nom : "+cat.cat_name);
                        }
               )
 
@@ -41,27 +29,17 @@ console.log(catChoice);
 if (isNaN(catChoice)) {
     console.log("Veuillez entrer un nombre valide !");
 } else {
-    const chatChoisi = catMap.find(chat => chat.cat_id === catChoice);
+    const chosenCat = catMap.find(chat => chat.cat_id === catChoice);
     
-    if (chatChoisi) {
-        console.log("\n=== DÉTAILS DU CHAT ===");
-        console.log(`ID: ${chatChoisi.cat_id}`);
-        console.log(`Nom: ${chatChoisi.cat_name}`);
-        console.log(`Âge: ${chatChoisi.cat_age} ans`);
-        console.log(`Race: ${chatChoisi.cat_race}`);
-        console.log(`Couleur: ${chatChoisi.cat_fur_colors}`);
-        console.log(`Genre: ${chatChoisi.cat_gender}`);
-        console.log(`Puce électronique: ${chatChoisi.cat_microchip_number}`);
+    if (chosenCat) {
+        showCat(chosenCat);
     } else {
         console.log(`Désolé, aucun chat avec l'ID ${catChoice} n'a été trouvé.`);
     }
 }
 
 
-function chooseCat(catChoice, catMap){
 
-    
-}
 
 
 /*
@@ -156,8 +134,19 @@ console.table(allCatsTab);
 */
 
 
+sc.close();
 
+}
 
+function showCat(cat) {
+    console.log("\n=== DÉTAILS DU CHAT ===");
+    console.log(`ID : ${cat.cat_id}`);
+    console.log(`Nom : ${cat.cat_name}`);
+    console.log(`Âge : ${cat.cat_age} ans`);
+    console.log(`Race : ${cat.cat_race}`);
+    console.log(`Couleur : ${cat.cat_fur_colors}`);
+    console.log(`Genre : ${cat.cat_gender}`);
+    console.log(`Puce : ${cat.cat_microchip_number}`);
 }
 main();
 
