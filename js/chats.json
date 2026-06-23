@@ -1,0 +1,94 @@
+
+[
+{
+            "cat_id": 1,
+            "cat_name": "Jean-Kévin du 68",
+            "cat_microchip_number": 269453981,
+            "cat_age": 8,
+            "cat_gender": "mâle",
+            "cat_race": "Ragdoll",
+            "cat_fur_colors": "beige et marron"
+        },
+        {
+            "cat_id": 2,
+            "cat_name": "Chat GPT",
+            "cat_microchip_number": 2541396585,
+            "cat_age": 3,
+            "cat_gender": "mâle",
+            "cat_race": "Maine Coon",
+            "cat_fur_colors": "blanc, gris et noir "
+        },
+        {
+            "cat_id": 3,
+            "cat_name": "La Destructrice de Canapés",
+            "cat_microchip_number": 1652439541,
+            "cat_age": 5,
+            "cat_gender": "femelle",
+            "cat_race": "Russian Blue",
+            "cat_fur_colors": "gris"
+        },
+        {
+            "cat_id": 4,
+            "cat_name": "Salem",
+            "cat_microchip_number": 1369781254,
+            "cat_age": 11,
+            "cat_gender": "femelle",
+            "cat_race": "Bombay",
+            "cat_fur_colors": "noir"
+        },
+        {
+            "cat_id": 5,
+            "cat_name": "Chasseur de rats 3000",
+            "cat_microchip_number": 2546325119,
+            "cat_age": 61,
+            "cat_gender": "mâle",
+            "cat_race": "European",
+            "cat_fur_colors": "blanc et gris"
+        },
+        {
+            "cat_id": 6,
+            "cat_name": "Luna",
+            "cat_microchip_number": 1652399815,
+            "cat_age": 61,
+            "cat_gender": "femelle",
+            "cat_race": "British Shorthair",
+            "cat_fur_colors": "gris"
+        },
+        {
+            "cat_id": 7,
+            "cat_name": "Patate Fâchée",
+            "cat_microchip_number": 2364856191,
+            "cat_age": 2,
+            "cat_gender": "mâle",
+            "cat_race": "Siamese",
+            "cat_fur_colors": "beige et marron"
+        },
+        {
+            "cat_id": 8,
+            "cat_name": "Professeur Jiggly",
+            "cat_microchip_number": 1945327519,
+            "cat_age": 8,
+            "cat_gender": "femelle",
+            "cat_race": "Ragamuffin",
+            "cat_fur_colors": "beige et gris"
+        },
+        {
+            "cat_id": 9,
+            "cat_name": "La Duchesse de Montesquieu",
+            "cat_microchip_number": 2541236963,
+            "cat_age": 3,
+            "cat_gender": "mâle",
+            "cat_race": "Bengal",
+            "cat_fur_colors": "jaune et orange"
+        },
+        {
+            "cat_id": 10,
+            "cat_name": "Coussinets en Or",
+            "cat_microchip_number": 1625396185,
+            "cat_age": 10,
+            "cat_gender": "femelle",
+            "cat_race": "Turkish Angora",
+            "cat_fur_colors": "blanc"
+        }
+        
+]
