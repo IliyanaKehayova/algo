@@ -20,30 +20,30 @@ import { stdin as input, stdout as output } from "node:process";
 
 async function loadData() {
 
-    let response = await fetch(
+    let response = await fetch( //la méthode fetch sert comme une livraison de colis qui reste fermé lors de la livraison
         "https://arfp.github.io/tp/web/javascript2/03-employees/employees.json"
     );
 
-    let data = await response.json();
+    let data = await response.json(); //ici c'est comme si on ouvre le colis
 
-    const employees = data.data.map((emp) => {
+    const employees = data.data.map((emp) => { //on va repartir les données dans une map afin de pouvoir les consulter avec la clé après
 
         const [firstName, ...lastNameParts] =
-            emp.employee_name.split(" ");
+            emp.employee_name.split(" "); // on va diviser le nom entier par l'espace 
 
         const lastName =
-            lastNameParts.join("").toLowerCase();
+            lastNameParts.join("").toLowerCase(); //on prend la deuxième partie du nom et on fait join pour qu'il s'affiche ensemble en miniscules
 
         const email =
-            `${firstName[0].toLowerCase()}.${lastName}@email.com`;
+            `${firstName[0].toLowerCase()}.${lastName}@email.com`; //l'adresse mail sera la lettre à la position zéro et le nom avec à la fin l'arobase
 
         const income_monthly =
-            emp.employee_salary / 12;
+            emp.employee_salary / 12; // on divise par 12 le salaire pour avoir le salaire mensuel
 
         const year_of_birth =
-            2026 - emp.employee_age;
+            2026 - emp.employee_age; //pour avoir l'annee de naicasse on fait 2026 moins l'age
 
-        return {
+        return { //on affiche les donnees demandees 
 
             id: emp.id,
 
