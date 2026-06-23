@@ -23,7 +23,7 @@ do{
     console.log(propostion+" n'est pas un nombre. Veuillez choisir un nombre entre 0 et 100.")
                           }
     else if(proposition<valeurMin || proposition>valeurMax){
-    console.log("Le nombre "+propostion+" est en dehors de la plage "+valeurMin + " et "+valeurMax+ ". Veuillez choisir un autre nombre.")
+    console.log("Le nombre "+proposition+" est en dehors de la plage "+valeurMin + " et "+valeurMax+ ". Veuillez choisir un autre nombre.")
                                                            }
     else{
         if(proposition<randomNumber){
@@ -36,12 +36,13 @@ do{
                                          }
         else{
         console.log("Félicitations, le nombre choisi par l'ordinateur est "+randomNumber+".");
+        console.log("Vous avez réussi après "+nombreEssais+ " essais.");
         break;
             };
 
         };
 
-console.log("Vous avez réussi après "+nombreEssais+ " essais.");
+
 nombreEssais++;
 }while (proposition !=randomNumber);
 
