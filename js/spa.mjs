@@ -44,15 +44,15 @@ else {
 
               
                 if(findCat==="oui"){
-                chosenCat.forEach(cat => {
-                chosenCat.cat_status.push("indisponible");
+                
+                chosenCat.cat_status="indisponible";
                 showCat(chosenCat);
-                                    }
-                                     )}
-                                     
-                            
+                console.table(catMap);
 
-        //let newStatusString = JSON.stringify(chosenCat.cat_status, "indisponible");
+                                    }
+                                     
+                                     
+                    
         
                     }
                                
