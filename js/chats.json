@@ -7,7 +7,8 @@
             "cat_age": 8,
             "cat_gender": "mâle",
             "cat_race": "Ragdoll",
-            "cat_fur_colors": "beige et marron"
+            "cat_fur_colors": "beige et marron",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 2,
@@ -16,7 +17,8 @@
             "cat_age": 3,
             "cat_gender": "mâle",
             "cat_race": "Maine Coon",
-            "cat_fur_colors": "blanc, gris et noir "
+            "cat_fur_colors": "blanc, gris et noir ",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 3,
@@ -25,7 +27,8 @@
             "cat_age": 5,
             "cat_gender": "femelle",
             "cat_race": "Russian Blue",
-            "cat_fur_colors": "gris"
+            "cat_fur_colors": "gris",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 4,
@@ -34,7 +37,8 @@
             "cat_age": 11,
             "cat_gender": "femelle",
             "cat_race": "Bombay",
-            "cat_fur_colors": "noir"
+            "cat_fur_colors": "noir",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 5,
@@ -43,16 +47,18 @@
             "cat_age": 61,
             "cat_gender": "mâle",
             "cat_race": "European",
-            "cat_fur_colors": "blanc et gris"
+            "cat_fur_colors": "blanc et gris",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 6,
             "cat_name": "Luna",
             "cat_microchip_number": 1652399815,
-            "cat_age": 61,
+            "cat_age": 6,
             "cat_gender": "femelle",
             "cat_race": "British Shorthair",
-            "cat_fur_colors": "gris"
+            "cat_fur_colors": "gris",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 7,
@@ -61,7 +67,8 @@
             "cat_age": 2,
             "cat_gender": "mâle",
             "cat_race": "Siamese",
-            "cat_fur_colors": "beige et marron"
+            "cat_fur_colors": "beige et marron",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 8,
@@ -70,7 +77,8 @@
             "cat_age": 8,
             "cat_gender": "femelle",
             "cat_race": "Ragamuffin",
-            "cat_fur_colors": "beige et gris"
+            "cat_fur_colors": "beige et gris",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 9,
@@ -79,7 +87,8 @@
             "cat_age": 3,
             "cat_gender": "mâle",
             "cat_race": "Bengal",
-            "cat_fur_colors": "jaune et orange"
+            "cat_fur_colors": "jaune et orange",
+            "cat_status": "disponible"
         },
         {
             "cat_id": 10,
@@ -88,7 +97,8 @@
             "cat_age": 10,
             "cat_gender": "femelle",
             "cat_race": "Turkish Angora",
-            "cat_fur_colors": "blanc"
+            "cat_fur_colors": "blanc",
+            "cat_status": "disponible"
         }
         
 ]
