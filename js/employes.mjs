@@ -26,7 +26,7 @@ async function loadData() {
 
     let data = await response.json(); //ici c'est comme si on ouvre le colis
 
-    const employees = data.data.map((emp) => { //on va repartir les données dans une map afin de pouvoir les consulter avec la clé après
+    const employees = data.data.map((emp) => { //on va repartir les données dans une map afin de pouvoir les consulter avec la clé après - fonction flechée
 
         const [firstName, ...lastNameParts] =
             emp.employee_name.split(" "); // on va diviser le nom entier par l'espace 
@@ -35,7 +35,7 @@ async function loadData() {
             lastNameParts.join("").toLowerCase(); //on prend la deuxième partie du nom et on fait join pour qu'il s'affiche ensemble en miniscules
 
         const email =
-            `${firstName[0].toLowerCase()}.${lastName}@email.com`; //l'adresse mail sera la lettre à la position zéro et le nom avec à la fin l'arobase
+            (firstName[0].toLowerCase()+"."+lastName+"@email.com"); //l'adresse mail sera la lettre à la position zéro et le nom avec à la fin l'arobase
 
         const income_monthly =
             emp.employee_salary / 12; // on divise par 12 le salaire pour avoir le salaire mensuel
