@@ -53,6 +53,14 @@ sc.close();
     for (let i = 1; i <= n; i++) {
         res *= i;
     }
-    return res;     }          
+    return res;     } 
+
+/*function fact(n) {
+    if (n === 0) {
+        return 1;
+    }
+
+    return n * fact(n - 1);
+}*/
 
 await main();
