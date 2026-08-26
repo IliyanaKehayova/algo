@@ -1,0 +1,17 @@
+.body {background-color: white;}
+.item1, .item {background: rgb(180, 180, 243);}
+.grid_container {display: grid;
+                height: 100px;
+                grid-template-rows: 60px 60px;
+                grid-template-columns: 60px 60px;
+                gap: 1em;
+                grid-template-areas: "box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-1 box-2 ";}
+.grid_container2 {display: grid;
+                height: 900px;
+                grid-template-rows: 60px 60px;
+                grid-template-columns: 60px 60px;
+                gap: 1em;
+                grid-template-areas: "box-3 box-3 box-4 box-5";}
+
+
+
