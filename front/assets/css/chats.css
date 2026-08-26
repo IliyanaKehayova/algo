@@ -1,0 +1,5 @@
+#h1 {text-align: center; color: white; background-color: #e64b3c; padding: 20px;}
+#main {background-color: lightgray; height: 700px}
+#first_section {display: flex; flex-direction: row; gap: 20px; justify-content: center;}
+#cat_profile {display: flex; flex-direction: column; width: 300px; list-style-type: none; background-color: white; }
+#cat_image {width: 90%; height: auto;}

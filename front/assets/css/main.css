@@ -1,0 +1,26 @@
+/*EXO AVIONS*/
+
+#h1, #h2, #body, #link, #p, #p_footer {font-family: Verdana; margin-left: 0px; margin-right: 0px;}
+#h1, #h2 {font-size: 30px; font-weight: bold; color: #CCFFCC;}
+#body {background-color: #222222;}
+#link {color: #CCCCFF; text-decoration: none;}
+#p, #p_footer, #description {color: #FFFFFF;}
+#p_footer {text-align: center;}
+#plane {width: 100px; height: 100px; align-items: left; justify-content: flex-start;}
+#header {background-color: #224422; flex-direction: row; display: flex; justify-content: space-evenly}
+#ul {list-style-type: none;}
+#plane, #nav, #h1 {display: flex; width: 600px;}
+#h1 {justify-content: center;}
+#nav {justify-content: flex-end;}
+#b {display: block; background-color: #3a6b3a; margin: 1px; width: 150px; text-align: left; cursor: pointer; box-shadow: none; padding-left: 10px;}
+#b:hover {background-color: #5d9c5d}
+#t {background-color: white; border: 2px black; table-layout: auto; width: 1000px; font-size: 16px; margin: 0px; border-collapse: collapse;}
+#tro {background-color: rgb(212, 212, 212); border-bottom: 1pt black; border-left: 1pt black; border-right: 1pt black;}
+#tr:nth-child(odd) {background-color: rgb(212, 212, 212);}
+#th1 {border: 1px solid black;}
+#th {font-weight: 200;}
+.table2 {place-items: center; }
+#second_row {background-color: white; width: 350px; height: 30px;}
+#first_row {background-color: white; width: 350px; height: 250px;}
+#image_link {padding: 30px; border: 1px solid black; margin: 20px 20px;}
+
