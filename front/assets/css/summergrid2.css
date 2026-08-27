@@ -1,0 +1,20 @@
+.principal {display: grid; gap: 2px; max-width: 800px; grid-template-rows: 4fr; grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    "box-1 box-1 box-1 box-1" 
+    "box-2 box-big box-big box-big" 
+    "box-2 box-big box-big box-big"
+    "box-2 box-big box-big box-big"
+    "box-2 box-big box-big box-big" 
+    ;}
+
+.principal section {background-color: #CCCC33; color: white; padding: 10px; font-size: 30px;}
+
+#s3 {display: flex; flex-wrap: wrap; gap: none; background-color: #CCCC33; color: white; font-size: 30px; align-content: flex-start; flex-direction: row; justify-content: space-between;}
+
+#s3 div {border: 1px solid white; flex: 0 1 20%}
+
+#d4, #d5 {min-width: 385px;}
+
+#d10 {min-width: 580px;}
+
+#d3, #d6, #d7, #d8, #d9 {min-width: 190px;}

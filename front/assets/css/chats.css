@@ -3,6 +3,6 @@ body {margin: 8px; font-family: Arial;}
 #main {background-color: lightgray; height: 700px; padding-top: 0px;}
 #first_section {display: flex; flex-direction: row; gap: 14px; justify-content: center;}
 #cat_profile { display: flex; flex-direction: column; width: 210px; margin: 0; padding: 0; list-style-type: none; background-color: white;}
-#cat_image {width: 100%; height: 118px; object-fit: cover; display: block;}
-#cat_name {color: #e64b3c; font-size: 18px; margin: 10px 6px 5px 6px;}
+#cat_image {width: 100%; height: 120px; object-fit: cover; display: block;}
+#cat_name {color: #e64b3c; font-size: 18px; margin: 5px;}
 #cat_description {color: #222222; font-size: 12px; margin: 5px 6px 10px 6px;}

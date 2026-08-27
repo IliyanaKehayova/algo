@@ -1,0 +1,10 @@
+.principal {display: grid; gap: 2px; height: 700px;
+    grid-template-areas: 
+    "box-1 box-1 box-1 box-1" 
+    "box-2 box-3 box-4 box-4" 
+    "box-2 box-5 box-5 box-6"
+    "box-2 box-7 box-8 box-9"
+    "box-2 box-10 box-10 box-10"
+    ;}
+
+.principal section {background-color: #CCCC33; color: white; padding: 10px; font-size: 30px;}
