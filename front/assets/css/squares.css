@@ -1,0 +1,37 @@
+body {
+background-color: grey;
+}
+
+h1 {
+    color: white;
+}
+
+#white_square {
+    background-color: white; 
+    height: 50px; 
+    width: 50px;
+
+}
+
+#black_square {
+    background-color: black; 
+    height: 50px; 
+    width: 50px;
+}
+
+#red_square {
+    background-color: red; 
+    height: 50px; 
+    width: 50px;
+}
+
+.heart {
+    display: grid; 
+    height: 700px;
+    width: 700px;
+    grid-template-rows: repeat(9, 1fr); grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: 
+    "ws ws bs bs ws bs bs ws ws"
+    "ws bs rs rs bs rs rs bs ws"
+
+    ;}
