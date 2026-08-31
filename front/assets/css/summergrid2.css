@@ -9,10 +9,10 @@
 
 .principal section {background-color: #CCCC33; color: white; font-size: 30px;}
 
-#s3 {display: flex; flex-wrap: wrap; gap: none; background-color: #CCCC33; color: white; font-size: 30px; align-content: flex-start; flex-direction: row; 
-    justify-content: space-between;}
+#s3 {display: flex; flex-wrap: wrap; gap: none; background-color: #CCCC33; color: white; font-size: 30px;  flex-direction: row; 
+    }
 
-#s3 div {border: 1px solid white; flex: 0 1 20%}
+#s3 div {border: 1px solid white; flex: 1;}
 
 #d4, #d5 {min-width: 385px;}
 
