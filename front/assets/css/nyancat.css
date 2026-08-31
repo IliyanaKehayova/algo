@@ -1,0 +1,4 @@
+h1 {text-align: center; color: white;}
+body {background-color: #0F4D8F}
+main {display: flex; flex-direction: column; align-items: center;}
+#nyanwindow { border: solid white; display: flex; height: 300px; width: 600px; justify-content: center; align-items: center; border-radius: 20px; margin: 0 auto;}
