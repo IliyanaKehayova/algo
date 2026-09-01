@@ -1,16 +1,32 @@
 body {
-   background-image: url("asserts/img/css-16-bg.web^p")
-}
-
-ul {
     display: flex;
+    position: relative;
 }
 
-img {
-    width: 20%;
+#background_image {
+   z-index: -1;
+   position: absolute;
+   width: 100%; 
 }
 
-li {
-    gap: 10px; 
-    list-style-type: none;
+.trois_planetes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+#img_1 { 
+    width: 10%;
+    height: 10%;
+}
+
+#img_2 { 
+    width: 12%;
+    height: 12%;
+}
+
+#img_3 { 
+    width: 15%;
+    height: 15%;
 }
