@@ -1,0 +1,16 @@
+body {
+   background-image: url("asserts/img/css-16-bg.web^p")
+}
+
+ul {
+    display: flex;
+}
+
+img {
+    width: 20%;
+}
+
+li {
+    gap: 10px; 
+    list-style-type: none;
+}
