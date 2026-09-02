@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    height: 45px; 
+    height: 40px; 
     display: flex; 
     flex-direction: row;
     background-color: #ffffff;
@@ -31,7 +31,7 @@ header {
     margin-bottom: 10px; 
     margin-top: 10px;
     margin-left: 15px;
-    width: 400px;
+    width: 405px;
 
 }
 
@@ -55,7 +55,10 @@ h1 {
 
 .section_photo_poste {
     display: grid;
-    margin-left: 10px; 
+    margin-left: 15px; 
+    grid-template-areas:
+    "box-1 box-2"
+    "box-1 box-3";
     
 }
 
@@ -71,13 +74,13 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    height: 22px;
+    height: 19px;
 }
 
 #bouton_play_enverse, #bouton_play_droit {
     width: 15px;
     height: 15px;
-    margin-top: 5px; 
+    margin-top: 3px; 
     margin-left: 8px;
     margin-right: 8px;
 
@@ -93,14 +96,16 @@ h1 {
 }
 
 #bouton_play_central {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
+    
 }
 
 #age_text {
-    margin-right: 87px;
+    margin-right: 90px;
     margin-bottom: 0;
     font-weight: bold;
+    font-size: 15px;
     margin-left: 2px;
     color: #503136;
 }
@@ -108,12 +113,88 @@ h1 {
 .boutons_play {
     display: flex;
     flex-direction: row;
-    height: 30px;
+    height: 16px;
     justify-content: center;
+    
     
 }
 
 #bouton_play_enverse {
     transform: scaleX(-1);
+}
+
+.conteneur_projet {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 15px;
+    height: 80px;
+    width: 227px;
+    background-color: #B48195;
+    margin-bottom: -10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    
+}
+
+#titre_projet {
+    margin: 10px 0px 0px 0px;
+}
+
+.conteneur_poste {
+    height: 130px;
+    width: 225px;
+    background-color: #FBE8C7;
+    margin-left: -20px;
+    padding-left: 30px;
+    order: -1; 
+    font-weight: bold;
+    text-align: center;
+    font-size: 31px;
+    color: #503136;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+#titre_poste {
+    margin: 10px 0px 0px 0px;
+    padding-right: 10px;
+}
+
+
+
+.section_formations_presentation {
+    display: grid;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+
+#folder {
+    width: 160px;
+    height: 110px;
+    padding-top: 15px;
+    margin-bottom: -10px;
+    
+}
+
+#formations {
+    margin-left: 5px; 
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 22px;
+    color: #503136;
+}
+
+#fenetre_presentation {
+    background-color: white;
+}
+
+#barre_haute {
+    display: flex;
+    flex-direction: row;
+    background-color: #B48195;
 }
 
