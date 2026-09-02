@@ -40,7 +40,6 @@ h1 {
 .onglet_photo {
     display: flex;
     flex-direction: column; 
-    
 }
 
 #age { 
