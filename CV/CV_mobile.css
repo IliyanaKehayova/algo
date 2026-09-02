@@ -1,18 +1,23 @@
+@media screen and (max-width: 780px) {
+    body {
+        background-position: center top;
+    }
+}
+
 html, body {
     margin: 0;
     min-height: 100vh;
+    width: 100%;
 }
 
-@media screen and (max-width: 780px) {
-    body {
-        min-height: 100vh;
-        background-color: #f4edf2;
-        background-image: url("mobile_background.png");
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: cover;
-        font-family: 'Arvo', sans-serif;
-    }
+body {
+    min-height: 100vh;
+    background-color: #f4edf2;
+    background-image: url("mobile_background.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arvo', sans-serif;
 }
 
 header {
@@ -23,16 +28,19 @@ header {
     justify-content: center;
     gap: 5px; 
     align-items: center; 
-    margin-bottom: 30px; 
+    margin-bottom: 10px; 
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 400px;
 
 }
 
 h1 {
     font-size: 26px;
-    color: #000000;
+    color: #503136;
     text-align: center;
-    margin-left: 40px; 
-    margin-right: 40px; 
+    margin-left: 30px; 
+    margin-right: 30px; 
 
 }
 
@@ -55,15 +63,15 @@ h1 {
     display: flex;
     flex-direction: column; 
     background-color: #B48195;
-    width: 200px; 
+    width: 170px; 
     border: 1px solid black;
 }
 
 #age { 
-display: flex;
-flex-direction: row;
-align-items: flex-end;
-height: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 22px;
 }
 
 #bouton_play_enverse, #bouton_play_droit {
@@ -77,8 +85,8 @@ height: 22px;
 }
 
 #photo_iliyana {
-    width: 200px;
-    height: 220px; 
+    width: 170px;
+    height: 180px; 
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 
@@ -90,10 +98,11 @@ height: 22px;
 }
 
 #age_text {
-    margin-right: 123px;
+    margin-right: 87px;
     margin-bottom: 0;
     font-weight: bold;
     margin-left: 2px;
+    color: #503136;
 }
 
 .boutons_play {
@@ -107,3 +116,4 @@ height: 22px;
 #bouton_play_enverse {
     transform: scaleX(-1);
 }
+
