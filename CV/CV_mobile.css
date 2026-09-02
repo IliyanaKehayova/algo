@@ -1,9 +1,17 @@
-@media screen and (max-width: 780px) { body {
-    background-image: url("mobile_background.png"); 
-    background-size: 430px 824px; 
-    background-repeat: no-repeat;
-    font-family: 'Arvo'; 
+html, body {
+    margin: 0;
+    min-height: 100vh;
+}
 
+@media screen and (max-width: 780px) {
+    body {
+        min-height: 100vh;
+        background-color: #f4edf2;
+        background-image: url("mobile_background.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Arvo', sans-serif;
     }
 }
 
@@ -15,6 +23,7 @@ header {
     justify-content: center;
     gap: 5px; 
     align-items: center; 
+    margin-bottom: 30px; 
 
 }
 
@@ -32,30 +41,47 @@ h1 {
     height: 15px;
 }
 
+#x_close_purple {
+    margin-bottom: 3px;
+}
+
 .section_photo_poste {
     display: grid;
+    margin-left: 10px; 
     
 }
 
 .onglet_photo {
     display: flex;
     flex-direction: column; 
+    background-color: #B48195;
+    width: 200px; 
+    border: 1px solid black;
 }
 
 #age { 
 display: flex;
 flex-direction: row;
 align-items: flex-end;
+height: 22px;
 }
 
 #bouton_play_enverse, #bouton_play_droit {
     width: 15px;
     height: 15px;
+    margin-top: 5px; 
+    margin-left: 8px;
+    margin-right: 8px;
+
+    
 }
 
 #photo_iliyana {
-    width: 150px;
-    height: 200px; 
+    width: 200px;
+    height: 220px; 
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
 }
 
 #bouton_play_central {
@@ -64,6 +90,20 @@ align-items: flex-end;
 }
 
 #age_text {
-    margin-right: 80px;
+    margin-right: 123px;
     margin-bottom: 0;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.boutons_play {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    justify-content: center;
+    
+}
+
+#bouton_play_enverse {
+    transform: scaleX(-1);
 }
