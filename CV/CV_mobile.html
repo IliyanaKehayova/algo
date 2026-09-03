@@ -16,8 +16,8 @@
 <body>
     
     <header> 
-    <img src="transparent_circle.png" alt="" id="transparent_circle">
-    <img src="transparent_circle.png" alt="" id="transparent_circle">
+        <span></span>
+        <span style="display:inline-block; width:15px; height:15px; border:1px solid gray; border-radius: 50%;"></span>
     <h1>Iliyana KEHAYOVA</h1>
     <img src="lower_dash.png" alt="" id="lower_dash">
     <img src="windows.png" alt="" id="windows">
@@ -27,28 +27,32 @@
         <main>
             <section class="section_photo_poste">
                 
-                <div class="onglet_photo" style="grid-area: box-1">
-                    <div id="age">
-                    <p id="age_text">35 ans</p>
-                    <img src="lower_dash_purple.png" id="lower_dash_purple" alt="">
-                    <img src="x_close_purple.png" id="x_close_purple" alt="">
+                <div class="onglet_photo">
+                    <div class="age">
+                        <p class="age_text">35 ans</p>
+                        <div>
+                            <span class="second_lower_dash">_</span>
+                            <span class="second_x">⨯</span>
+                        </div>
                     </div>
 
-                    <div id="photo"><img src="photo_iliyana.png" id="photo_iliyana" alt="photo d'Iliyana"></div>
+                    <div id="photo">
+                        <img src="photo_iliyana.png" id="photo_iliyana" alt="photo d'Iliyana">
+                    </div>
                     
                     <div class="boutons_play">
-                    <img src="bouton_play.png" id="bouton_play_enverse" alt=""> 
-                    <img src="bouton_play.webp" id="bouton_play_central" alt="">  
-                    <img src="bouton_play.png" id="bouton_play_droit" alt=""> 
+                        <img src="bouton_play.png" class="bouton_play_enverse" alt=""> 
+                        <img src="bouton_play.webp" class="bouton_play_central" alt="">  
+                        <img src="bouton_play.png" class="bouton_play_droit" alt=""> 
                     </div>
                 </div>
 
-                <div class="conteneur_projet" style="grid-area: box-2">
-                <p id="titre_projet">Projet de reconversion professionnelle vers le métier de</p>
+                <div class="conteneur_projet">
+                    <p class="titre_projet">Projet de reconversion professionnelle vers le métier de</p>
                 </div>
 
-                <div class="conteneur_poste" style="grid-area: box-3">
-                <p id="titre_poste">Concepteur Développeur d'Applications</p>
+                <div class="conteneur_poste">
+                    <p class="titre_poste">Concepteur Développeur d'Applications</p>
                 </div>
 
             </section>
@@ -56,23 +60,60 @@
 
             <section class="section_formations_presentation">
                 <div id="onlget_formations">
-                    <img src="folder.png" id="folder" alt="Image d'un fichier" "grid-area: box-4">
-                    <p id="formations" "grid-area: box-5">FORMATIONS</p>
+                    <img src="folder.png" class="folder" alt="Image d'un fichier" >
+                    <p class="formations" >FORMATIONS</p>
                 </div>
 
+            <section class="trois_fenetres">
+        
                 <div id="fenetre_presentation">
-                    <div id="barre_haute">
-                        <img src="cercle_gris">
-
+                    <div class="barre_haute">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <p id="question_presentation">Souhaitez-vous découvrir qui je suis ?</p>
+                    <p class="question_presentation">Souhaitez-vous découvrir qui je suis ?</p>
                     <button id="bouton_oui">OUI</button>
                     <button id="bouton_non">NON</button>
                 </div>
+                
+                
+                <div id="avant_derniere_fenetre"></div>
 
+                <div id="derniere_fenetre"></div>
+
+            </section>
+
+            </section>
+
+
+            <section class="section_experiences_projets">
+
+                <div id="fenetre_experience">
+                    <div id="deuxieme_barre_haute">
+                        <div id="reduire_onglet"></div>
+                        <div id="agrandir"></div>
+                        <div id="fermer_onglet"></div>
+                    </div>
+                    <div id="fenetre_terminal">
+                        <p class="premiere_ligne_terminal">ikehayova@crm:~Expérience</p>
+                        <p class="deuxieme_ligne_terminal">ikehayova@crm:~Professionnelle</p>
+                    </div>
+                    <button id="bouton_go">GO!</button>
+                </div>
+
+                <div class="fenetre_projets">
+                    <img src="icone_ordinateur.png" id="icone_ordinateur" alt="">
+                    <p class="projets_realises">PROJETS RÉALISÉS</p>
+                </div>
             </section>
         
            
+            <section class="langues_loisirs">
+                <div></div>
+
+
+            </section>
        
         </main>
 

@@ -5,9 +5,10 @@
 }
 
 html, body {
-    margin: 0;
+    margin: 0 auto;
     min-height: 100vh;
     width: 100%;
+    max-width: 430px;
 }
 
 body {
@@ -33,6 +34,14 @@ header {
     margin-left: 15px;
     width: 405px;
 
+}
+
+header span {
+    display:inline-block; 
+    width:15px; 
+    height:15px; 
+    border:1px solid gray; 
+    border-radius: 50%;
 }
 
 h1 {
@@ -68,16 +77,32 @@ h1 {
     background-color: #B48195;
     width: 170px; 
     border: 1px solid black;
+    grid-area: box-1;
 }
 
-#age { 
+.age { 
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: space-between;
     height: 19px;
 }
 
-#bouton_play_enverse, #bouton_play_droit {
+
+.age_text div {
+    margin-bottom: 1px;
+}
+
+.second_lower_dash {
+    font-weight: bold;
+}
+
+.second_x {
+    font-size: 20px; 
+    padding-top:50px;
+}
+
+.bouton_play_enverse, .bouton_play_droit {
     width: 15px;
     height: 15px;
     margin-top: 3px; 
@@ -95,14 +120,14 @@ h1 {
 
 }
 
-#bouton_play_central {
+.bouton_play_central {
     width: 22px;
     height: 22px;
     
 }
 
-#age_text {
-    margin-right: 90px;
+.age_text {
+
     margin-bottom: 0;
     font-weight: bold;
     font-size: 15px;
@@ -135,10 +160,11 @@ h1 {
     text-align: center;
     font-size: 18px;
     color: white;
+    grid-area: box-2;
     
 }
 
-#titre_projet {
+.titre_projet {
     margin: 10px 0px 0px 0px;
 }
 
@@ -156,9 +182,10 @@ h1 {
     border: 1px solid black;
     margin-bottom: 20px;
     margin-right: 5px;
+    grid-area: box-3;
 }
 
-#titre_poste {
+.titre_poste {
     margin: 10px 0px 0px 0px;
     padding-right: 10px;
 }
@@ -166,13 +193,14 @@ h1 {
 
 
 .section_formations_presentation {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     margin-top: 0;
     margin-left: 10px;
+   
 }
 
-
-#folder {
+.folder {
     width: 160px;
     height: 110px;
     padding-top: 15px;
@@ -180,7 +208,7 @@ h1 {
     
 }
 
-#formations {
+.formations {
     margin-left: 5px; 
     margin-top: 0;
     font-weight: bold;
@@ -188,13 +216,218 @@ h1 {
     color: #503136;
 }
 
-#fenetre_presentation {
-    background-color: white;
+.trois_fenetres {
+    position: relative;
+    width: 250px;
+    height: 220px;
+    margin-left: 30px;
 }
 
-#barre_haute {
+#fenetre_presentation {
+    position:absolute;
+    top: 0;
+    left: 0;
+
+
+    display: grid;
+    grid-template-areas:
+    "box-4 box-4"
+    "box-5 box-5"
+    "box-6 box-7";
+    background-color: white;
+    border: 2px solid #503136;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+#avant_derniere_fenetre {
+    position:absolute;
+    top: 5;
+    left: 5;
+
+    width: 200px;
+    height: 150px;
+    background-color: #FBE8C7;
+    border-radius: 10px;
+    z-index: 2;
+    margin-left: 9px; 
+    margin-top: 9px;
+    border: 2px solid #503136; 
+}
+
+    #derniere_fenetre {
+    position:absolute;
+    top: 10;
+    left: 10;
+
+    width: 200px;
+    height: 150px;
+    background-color:#503136;
+    border-radius: 10px;
+    z-index: 1;
+    margin-left: 15px; 
+    margin-top: 15px;
+    border: 2px solid #503136;
+}
+            
+
+.cercle_gris {
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+}
+
+
+
+
+.barre_haute {
     display: flex;
     flex-direction: row;
     background-color: #B48195;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom: 2px solid #503136;
+    grid-area: box-4;
 }
 
+.barre_haute span {
+    display:inline-block; 
+    width:12px; 
+    height:12px; 
+    background: rgb(197, 197, 197); 
+    border-radius: 50%;
+    margin: 5px 2px 2px 5px; 
+}
+
+.question_presentation {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color:#503136;
+    grid-area: box-5;
+}
+
+
+#bouton_non { 
+    width: 85px;
+    height: 50px;
+    border-radius: 23px;
+    border: 2px solid #503136;
+    background-color: #B48195;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: white;
+    grid-area: box-7;
+}
+
+#bouton_oui { 
+    margin-left: 10px;
+    margin-bottom: 5px;
+    width: 85px;
+    height: 50px;
+    border-radius: 23px;
+    border: 2px solid #503136;
+    background-color: #FBE8C7;
+    font-weight: bold;
+    font-size: 18px;
+    color: #503136;
+    grid-area: box-6;
+}
+
+.section_experiences_projets {
+    display: flex;
+    margin-top: -30px;
+    margin-left: 15px;
+    margin-right: -15px;
+}
+
+
+
+#fenetre_experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    height: 150px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #503136;
+}
+
+#deuxieme_barre_haute {
+    height: 30px;
+    width: 220px;
+    background-color: #B48195;
+    border-radius: 5px;
+    margin: 1px;
+    border: 2px solid #503136;
+    margin-bottom: 1px;
+
+}
+
+#fenetre_terminal {
+    background-color: #503136;
+   
+    width: 223px;
+    height: 70px; 
+    margin: 1px 2px 5px 2px;
+
+}
+
+.premiere_ligne_terminal, .deuxieme_ligne_terminal {
+    color: white;
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+.premiere_ligne_terminal {
+    margin-top: 1px;
+}
+
+.deuxieme_ligne_terminal {
+    margin-top: -14px;
+}
+
+.fenetre_projets {
+    position: relative;
+}
+
+
+
+#bouton_go {
+    
+    background-color: #FBE8C7;
+    width: 120px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    color:#503136;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    border: 2px solid #503136;
+
+    
+}
+
+#icone_ordinateur {
+    position: absolute;
+    width: 220px; 
+    height: 190px; 
+    margin-top: -15px;
+    margin-left: -10px;
+    z-index: 1;
+}
+
+.projets_realises {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    top: 11px; 
+    left: 60px;
+}
