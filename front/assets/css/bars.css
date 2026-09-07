@@ -1,0 +1,53 @@
+:root {
+    --background-color: #5C94FC;
+    --color-1: #4976C9;
+    --color-2: #375897;
+    --color-3: #243B64;
+    --color-4: #121D32;
+
+}
+
+body {
+    background-color: var(--background-color);
+  
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+#box {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+}
+
+
+#item1, #item2, #item3, #item4, #item5 {
+    border: 2px solid black;
+    height: 96px;
+} 
+
+#item1 {
+    width: 96px;
+    background-color: var(--color-1);
+    
+}
+
+#item2 {
+    width: 196px;
+    background-color: var(--color-2);
+}
+
+#item3 {
+    width: 296px;
+    background-color: var(--color-3);
+}
+
+#item4 {
+    width: 396px;
+    background-color: var(--color-4);
+}
+
