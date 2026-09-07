@@ -93,11 +93,13 @@ h1 {
 
 .second_lower_dash {
     font-weight: bold;
+    
 }
 
 .second_x {
-    font-size: 20px; 
-    padding-top:50px;
+    font-size: 15px; 
+    margin: 1px 2px 2px 1px;
+    
 }
 
 .bouton_play_enverse, .bouton_play_droit {
@@ -217,6 +219,16 @@ h1 {
     width: 250px;
     height: 220px;
     margin-left: 30px;
+}
+
+
+.ruban {
+    position:absolute;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    height: 50px;
+    width: 50px;
 }
 
 .fenetre_presentation {
@@ -352,14 +364,35 @@ h1 {
     margin: 1px;
     border: 2px solid #503136;
     margin-bottom: 1px;
+    justify-content: right;
 }
 
-#reduire_onglet, #agrandir_onglet, #fermer-onglet {
-    width: 15px;
-    height: 15px;
+#reduire_onglet, #agrandir_onglet, #fermer_onglet {
+    display: flex;
+    width: 20px;
+    height: 20px;
     background-color:rgb(228, 228, 228);
-    gap: 2px;
+    margin: 3px 2px 3px 0px;
+    border-radius: 1px;
+    border: 1px solid rgb(121, 121, 121);
+}
 
+#agrandir_onglet div {
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    margin: 3px 0px 0px 3px; 
+}
+
+#reduire_onglet {
+    justify-content: center;
+    font-weight: 550;
+}
+
+#fermer_onglet {
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .fenetre_terminal {
@@ -386,8 +419,6 @@ h1 {
 .fenetre_projets {
     position: relative;
 }
-
-
 
 #bouton_go {
     background-color: #FBE8C7;
@@ -448,6 +479,7 @@ h1 {
     background-color: #B48195;
     border-radius: 6px 6px 0px 0px;
     border-bottom: 2px solid #503136;
+    justify-content: right;
 }
 
 .troisieme_barre_haute span {
@@ -456,8 +488,8 @@ h1 {
     height:15px; 
     background: rgb(228, 228, 228); 
     border-radius: 50%;
-    margin: 5px 2px 2px 5px; 
-    justify-content: right;
+    margin: 5px 5px 2px 5px; 
+    
 }
 
 .bloc_menu_loisirs, .bloc_menu_passions {
@@ -470,7 +502,7 @@ h1 {
     border: 1px solid #503136;
     width: 170px;
     height: 20px;
-    margin: 12px 0px 8px 4px;
+    margin: 10px 0px 8px 4px;
     
 }
 
