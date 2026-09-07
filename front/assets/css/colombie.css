@@ -1,0 +1,26 @@
+#drapeau {
+    display: flex;
+    flex-direction: column;
+}
+
+#jaune {
+    background-color: #FCD116;
+    height: 300px;
+}
+
+#bleu {
+    background-color: #003893;
+    height: 200px;
+}
+
+#rouge {
+    background-color: #CE1126;
+    height: 200px;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px; 
+}
+
