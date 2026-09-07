@@ -29,7 +29,7 @@
                 
                 <div class="onglet_photo">
                     <div class="age">
-                        <p class="age_text">35 ans</p>
+                        <span class="age_text">35 ans</span>
                         <div>
                             <span class="second_lower_dash">_</span>
                             <span class="second_x">⨯</span>
@@ -66,7 +66,7 @@
 
             <section class="trois_fenetres">
         
-                <div id="fenetre_presentation">
+                <div class="fenetre_presentation">
                     <div class="barre_haute">
                         <span></span>
                         <span></span>
@@ -77,10 +77,9 @@
                     <button id="bouton_non">NON</button>
                 </div>
                 
-                
-                <div id="avant_derniere_fenetre"></div>
+                <div class="avant_derniere_fenetre"></div>
 
-                <div id="derniere_fenetre"></div>
+                <div class="derniere_fenetre"></div>
 
             </section>
 
@@ -89,13 +88,13 @@
 
             <section class="section_experiences_projets">
 
-                <div id="fenetre_experience">
-                    <div id="deuxieme_barre_haute">
-                        <div id="reduire_onglet"></div>
-                        <div id="agrandir"></div>
-                        <div id="fermer_onglet"></div>
+                <div class="fenetre_experience">
+                    <div class="deuxieme_barre_haute">
+                        <span id="reduire_onglet">_</span>
+                        <span id="agrandir_onglet"></span>
+                        <span id="fermer_onglet">X</span>
                     </div>
-                    <div id="fenetre_terminal">
+                    <div class="fenetre_terminal">
                         <p class="premiere_ligne_terminal">ikehayova@crm:~Expérience</p>
                         <p class="deuxieme_ligne_terminal">ikehayova@crm:~Professionnelle</p>
                     </div>
@@ -104,22 +103,37 @@
 
                 <div class="fenetre_projets">
                     <img src="icone_ordinateur.png" id="icone_ordinateur" alt="">
-                    <p class="projets_realises">PROJETS RÉALISÉS</p>
+                    <span class="projets_realises">PROJETS RÉALISÉS</span>
                 </div>
             </section>
         
            
             <section class="langues_loisirs">
-                <div></div>
+                
+                <img src="image_langues.png" id="image_langues">
+                
+                <section class="loisirs_passions">
+                    <div class="troisieme_barre_haute">
+                        <span></span>
+                    </div>
+                    <section class="bloc_menu_loisirs">
+                        <div id="menu_deroulant_loisirs">C:\Perso\Loisirs</div>
+                        <img src="fleche_blanche.png" class="fleche_menu_deroulant">
+                    </section>
 
-
+                    <section class="bloc_menu_passions">
+                        <div id="menu_deroulant_passions">C:\Perso\Passions</div>
+                        <img src="fleche_blanche.png" class="fleche_menu_deroulant">
+                    </section>
+                </section>
+                
             </section>
-       
+            
         </main>
 
       
             <footer>
-            
+            <button id="bouton_contact"><img src="enveloppe.png" id="image_enveloppe"><span>Contactez-moi</span></button>
             </footer>
 
 

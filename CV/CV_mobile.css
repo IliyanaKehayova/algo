@@ -53,14 +53,12 @@ h1 {
 
 }
 
-#transparent_circle, #lower_dash, #windows, #x_close, #lower_dash_purple, #x_close_purple {
+#lower_dash, #windows, #x_close {
     width: 15px;
     height: 15px;
 }
 
-#x_close_purple {
-    margin-bottom: 3px;
-}
+
 
 .section_photo_poste {
     display: grid;
@@ -144,8 +142,8 @@ h1 {
     
 }
 
-#bouton_play_enverse {
-    transform: scaleX(-1);
+.bouton_play_enverse {
+    transform: rotate(180deg);
 }
 
 .conteneur_projet {
@@ -161,7 +159,6 @@ h1 {
     font-size: 18px;
     color: white;
     grid-area: box-2;
-    
 }
 
 .titre_projet {
@@ -197,15 +194,14 @@ h1 {
     flex-direction: row;
     margin-top: 0;
     margin-left: 10px;
-   
+    margin-top: 15px;
 }
 
 .folder {
     width: 160px;
     height: 110px;
     padding-top: 15px;
-    margin-bottom: -10px;
-    
+    margin-bottom: -10px; 
 }
 
 .formations {
@@ -223,12 +219,10 @@ h1 {
     margin-left: 30px;
 }
 
-#fenetre_presentation {
+.fenetre_presentation {
     position:absolute;
     top: 0;
     left: 0;
-
-
     display: grid;
     grid-template-areas:
     "box-4 box-4"
@@ -242,11 +236,10 @@ h1 {
     z-index: 3;
 }
 
-#avant_derniere_fenetre {
+.avant_derniere_fenetre {
     position:absolute;
     top: 5;
     left: 5;
-
     width: 200px;
     height: 150px;
     background-color: #FBE8C7;
@@ -257,11 +250,10 @@ h1 {
     border: 2px solid #503136; 
 }
 
-    #derniere_fenetre {
+.derniere_fenetre {
     position:absolute;
     top: 10;
     left: 10;
-
     width: 200px;
     height: 150px;
     background-color:#503136;
@@ -272,15 +264,6 @@ h1 {
     border: 2px solid #503136;
 }
             
-
-.cercle_gris {
-    height: 15px;
-    width: 15px;
-    margin: 2px;
-}
-
-
-
 
 .barre_haute {
     display: flex;
@@ -296,7 +279,7 @@ h1 {
     display:inline-block; 
     width:12px; 
     height:12px; 
-    background: rgb(197, 197, 197); 
+    background: rgb(228, 228, 228); 
     border-radius: 50%;
     margin: 5px 2px 2px 5px; 
 }
@@ -341,14 +324,14 @@ h1 {
 
 .section_experiences_projets {
     display: flex;
-    margin-top: -30px;
+    margin-top: -25px;
     margin-left: 15px;
     margin-right: -15px;
 }
 
 
 
-#fenetre_experience {
+.fenetre_experience {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -359,24 +342,31 @@ h1 {
     border: 2px solid #503136;
 }
 
-#deuxieme_barre_haute {
+.deuxieme_barre_haute {
+    display: flex;
+    flex-direction: row;
     height: 30px;
-    width: 220px;
+    width: 224px;
     background-color: #B48195;
     border-radius: 5px;
     margin: 1px;
     border: 2px solid #503136;
     margin-bottom: 1px;
+}
+
+#reduire_onglet, #agrandir_onglet, #fermer-onglet {
+    width: 15px;
+    height: 15px;
+    background-color:rgb(228, 228, 228);
+    gap: 2px;
 
 }
 
-#fenetre_terminal {
+.fenetre_terminal {
     background-color: #503136;
-   
-    width: 223px;
+    width: 228px;
     height: 70px; 
     margin: 1px 2px 5px 2px;
-
 }
 
 .premiere_ligne_terminal, .deuxieme_ligne_terminal {
@@ -400,7 +390,6 @@ h1 {
 
 
 #bouton_go {
-    
     background-color: #FBE8C7;
     width: 120px;
     height: 40px;
@@ -410,8 +399,6 @@ h1 {
     border-radius: 10px;
     margin-bottom: 4px;
     border: 2px solid #503136;
-
-    
 }
 
 #icone_ordinateur {
@@ -428,6 +415,99 @@ h1 {
     z-index: 2;
     color: white;
     font-weight: bold;
-    top: 11px; 
+    top: 27px; 
     left: 60px;
+}
+
+.langues_loisirs {
+    display: flex;
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+#image_langues {
+    width: 210px;
+    height: 150px;
+}
+
+.loisirs_passions {
+    margin-top: 15px;
+    margin-left: 12px;
+    width: 200px;
+    height: 120px;
+    background-color: #FBE8C7;
+    border-radius: 10px;
+    border: 2px solid #503136;
+}
+
+.troisieme_barre_haute {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 25px;
+    background-color: #B48195;
+    border-radius: 6px 6px 0px 0px;
+    border-bottom: 2px solid #503136;
+}
+
+.troisieme_barre_haute span {
+    display: flex;
+    width:15px; 
+    height:15px; 
+    background: rgb(228, 228, 228); 
+    border-radius: 50%;
+    margin: 5px 2px 2px 5px; 
+    justify-content: right;
+}
+
+.bloc_menu_loisirs, .bloc_menu_passions {
+    display: inline-block;
+} 
+
+#menu_deroulant_loisirs, #menu_deroulant_passions {
+    display: inline-block;
+    background-color: rgb(228, 228, 228);
+    border: 1px solid #503136;
+    width: 170px;
+    height: 20px;
+    margin: 12px 0px 8px 4px;
+    
+}
+
+.fleche_menu_deroulant {
+    display: inline-block;
+    background-color: #503136;
+    border: 1px solid #503136;
+    height: 20px; 
+    width: 20px;
+    margin-bottom: -6.5px;
+    margin-left: -5px;
+}
+
+#bouton_contact {
+    display: flex;
+    background-color: #B48195;
+    border: 1px solid #503136;
+    width: 250px;
+    height: 60px;
+    border-radius: 20px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#bouton_contact span {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#image_enveloppe {
+    width: 60px;
+    height: 40px;
+    margin-left: -10px;
+    margin-right: -10px;
 }
