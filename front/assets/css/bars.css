@@ -27,27 +27,28 @@ main {
 
 #item1, #item2, #item3, #item4, #item5 {
     border: 2px solid black;
-    height: 96px;
+    height: 98px;
+    margin: -2px; 
 } 
 
 #item1 {
-    width: 96px;
+    width: 100px;
     background-color: var(--color-1);
     
 }
 
 #item2 {
-    width: 196px;
+    width: 200px;
     background-color: var(--color-2);
 }
 
 #item3 {
-    width: 296px;
+    width: 300px;
     background-color: var(--color-3);
 }
 
 #item4 {
-    width: 396px;
+    width: 400px;
     background-color: var(--color-4);
 }
 
