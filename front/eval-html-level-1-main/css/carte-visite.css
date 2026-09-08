@@ -16,6 +16,8 @@ body {
     font-family: var(--font);
 }
 
+/*box-shadow trouvé sur un super site : https://html-css-js.com/css/generator/box-shadow/ qui permet de faire des box shados sur mesure !*/
+
 main {
     
     background: linear-gradient(45deg, var(--vert1), var(--vert2));
@@ -23,7 +25,8 @@ main {
     height: 300px;
     color: var(--blanc);
     border-radius: 10px;
-    box-shadow: 1px 5px 1px rgb(189, 189, 189);
+    -webkit-box-shadow: 5px 5px 15px -6px #747474; 
+    box-shadow: 5px 5px 15px -6px #747474;
 }
 
 h1 {
@@ -84,6 +87,7 @@ footer {
     padding-left: 15px;
     border-radius: 10px;
     font-size: 15px;
-    box-shadow: 1px 1px 1px  rgb(189, 189, 189);
+    -webkit-box-shadow: 5px 5px 5px -6px #a0a0a0; 
+    box-shadow: 5px 5px 5px -6px #a0a0a0;
 }
 
