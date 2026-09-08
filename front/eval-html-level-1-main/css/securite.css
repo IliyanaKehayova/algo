@@ -7,5 +7,68 @@
     --vert2: #155724;
     --gris1: #e9ecef;
     --gris2: #6c757d;
-    --font: "Arial";
+    --font: "Arial Black";
+}
+
+body {
+    font-family: var(--font);
+    margin: 0 auto; 
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed var(--jaune);
+    
+}
+
+main, header, footer, #image_securite {
+    width: 900px;
+}
+
+header {
+    height: 115px;
+    background-color: var(--rouge1);
+    text-align: center;
+    margin-top: 15px;
+}
+
+h1 {
+    color: var(--rouge2);
+    margin: 10px;
+}
+
+h2 {
+    color: var(--rouge3);
+    margin-top: 0;
+    font-size: 20px;
+}
+
+#liste_consignes {
+    list-style-type: none;
+    color: var(--vert2);
+    gap: 10px;
+    
+ }
+ 
+#liste_consignes li {
+    background-color: var(--vert1);
+    display: block;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: -40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    
+}
+
+#image_securite {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: var(--gris1);
+    text-align: center;
+    color: var(--gris2);
+    margin-bottom: 15px;
 }
