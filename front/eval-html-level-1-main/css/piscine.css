@@ -1,0 +1,74 @@
+:root {
+    --bleu: #0c4e94;
+    --noir: black;
+    --rouge: #d31f26;
+    --blanc: white;
+    --font: "Arial";
+}
+
+body {
+    background-color: var(--blanc);
+    border: 10px solid var(--bleu);
+    margin: 20px;
+    border-radius: 5px;
+    font-family: var(--font);
+    width: 920px;
+    height: 1200px;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background-color: var(--bleu);
+    color: var(--blanc);
+    border-radius: 5px;
+    font-size: 50px;
+    padding: 20px 80px 20px 80px;
+    font-weight: bolder;
+}
+
+#swimming {
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+#interdictions p {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--rouge);
+    font-size: 50px;
+    text-decoration: underline;
+    font-weight: bolder;
+
+}
+
+#info_maitre_nageur {
+    font-size: 40px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
