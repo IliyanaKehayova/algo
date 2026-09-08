@@ -1,3 +1,42 @@
 body {
-    background-image: url("assets/img/snow-black.gif")
+    background-image: url("../img/snow-black.gif");
+    
+}
+
+#groupe_de_planetes {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+}
+
+
+#premiere_planete {
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 40%;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+#deuxieme_planete {
+    position: absolute;
+    background-color: white;
+    top: 40%;
+    left: 50%;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+}
+
+#troisieme_planete {
+    position: absolute;
+    background-color: white;
+    top: 30%;
+    left: 60%;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
 }
