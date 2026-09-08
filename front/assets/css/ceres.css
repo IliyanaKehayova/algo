@@ -1,0 +1,83 @@
+:root {
+    --background-color:  #E0E2E8;
+    --green:  #36A23E;
+    --orange: #FF6633;
+    --fushia:  #CC0066;
+    --font: "Verdana";
+}
+
+body {
+    background-color: var(--background-color);
+    
+}
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0px;
+    
+}
+
+#letter_c, 
+#letter_e_aigu, 
+#letter_r, 
+#letter_e_grave, 
+#letter_s, 
+#image_planete_ceres {
+    margin: 0;
+    
+}
+
+
+#letter_c {
+    border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+    border-left: 1px solid var(--green);
+    color: var(--green);
+}
+
+#letter_e_aigu {
+    border-top: 1px solid var(--orange);
+    border-bottom: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+#letter_r {
+    border-top: 1px solid var(--fushia);
+    border-bottom: 1px solid var(--fushia);
+    color: var(--fushia);
+}
+
+#letter_e_grave {
+    border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+    color: var(--green);
+}
+
+#letter_s {
+    border-top: 1px solid var(--orange);
+    border-bottom: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
+    color: var(--orange);
+}
+
+main {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+
+}
+
+#image_planete_ceres {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+footer p {
+    margin: 30px;
+    padding: 20px;
+    border-top: 1px solid rgb(168, 167, 167);
+    text-align: center;
+}
