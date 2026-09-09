@@ -1,0 +1,59 @@
+:root {
+    --blue: blue;
+    --grey: grey;
+}
+
+body, header, main, footer {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    color: var(--blue);
+    margin: 20px 20px 20px 5px;
+}
+
+.description_france, .tableau_informations_cles {
+    background-color: var(--grey);
+    border: 1px solid var(--blue);
+    height: 100px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+.description_france{
+    padding: 20px 10px 10px 20px;
+}
+
+.tableau_informations_cles {
+    padding: 20px 10px 10px 30px;
+}
+
+header {
+    background-color: var(--grey);
+    border: 1px solid var(--blue);
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.drapeau {
+    width: 100px;
+    display: block;
+}
+
+.tableau_villes_principales {
+    border: 1px solid var(--blue);
+
+}
+
+.tableau_villes_principales tr td {
+    border: 1px solid var(--blue);
+
+}
+
+.tableau_villes_principales tr th {
+    background-color: var(--grey);
+    border: 1px solid var(--blue);
+}
