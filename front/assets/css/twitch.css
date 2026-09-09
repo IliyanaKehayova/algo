@@ -1,0 +1,82 @@
+:root {
+    --bleu: #008CBA;
+    --gris: #555555;
+    --vert: #4CAF50;
+    --font: "monospace";
+}
+
+body {
+    font-family: var(--font);
+}
+
+h1 {
+    color: var(--bleu);
+}
+
+.section_boutons {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-top: 1px solid var(--gris); 
+    border-bottom: 1px solid var(--gris); 
+}
+
+#bouton__tri_par_popularite, 
+#bouton__tri_par_visionnage, 
+#bouton__tri_par_croissance {
+    height: 60px;
+    padding: 20px 40px 20px 40px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    margin: 10px 20px 20px -10px;
+    font-size: 16px;
+}
+
+#bouton__tri_par_popularite {
+    background-color: var(--bleu);
+}
+
+#bouton__tri_par_visionnage {
+    background-color: var(--vert);
+}
+
+#bouton__tri_par_croissance {
+    background-color: var(--gris);
+}
+
+.tableau_principal {
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.nom_streamer {
+    color: white;
+    
+
+}
+
+.tableau_de_donnees th {
+    background-color: rgb(194, 194, 194);
+    border: 1px solid black;
+}
+
+.tableau_principal tr td {
+    border: 1px solid black;
+}
+
+.tableau_interne {
+    display: inline-block;
+    border: 1px solid black;
+     text-align: left;
+}
+
+.tableau_interne tr th {
+    background-color: var(--vert);
+    color: white;
+}
+
+.tableau_interne tr td {
+    border: none;
+    width: 150px;
+}
