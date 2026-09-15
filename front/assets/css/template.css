@@ -1,0 +1,168 @@
+:root {
+    --black: #111111;
+    --grey: #CCCCCC;
+    --blue: #085E8F;
+    --dark-blue: #085A8F44;
+    --light-blue: #09BCE0;
+    --green: #09BCE044;
+    --font: "Arial";
+    color-scheme: light dark;
+}
+
+html, body {
+    font-family: var(--font);
+    min-height: 100vh;
+   
+}
+
+body { 
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+
+}
+
+header {
+    background-image: url('../img/basic-template-banner.png');
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 30px;
+    color: var(--grey);
+}
+
+header div {
+    text-align: center;
+    font-size: 30px;
+    color: var(--grey);
+    padding-top: 20px;
+    font-weight: bold; 
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    min-height: calc(100vh - 200px);
+}
+
+.menu_section {
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    align-self: stretch;
+    width: 200px;
+    flex: 0 0 200px;
+}
+
+.menu_title {
+    background-color: rgb(88, 88, 88);
+    color: var(--grey);
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 21px;
+}
+
+
+.menu_list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.menu_list li {
+    color: var(--light-blue);
+    background-color: rgb(88, 88, 88);
+    text-align: left;
+    font-size: 22px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.main_section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: var(--black);
+    align-self: stretch;
+}
+
+main > aside {
+    flex: 0 0 250px;
+}
+
+h1 {
+    color: var(--grey);
+    background-color: rgb(48, 48, 48);
+    padding: 20px;
+    margin: 0 0 20px 0;
+    font-size: 30;
+
+}
+
+.articles_section {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--black);
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.article {
+    width: 500px;
+    height: 120px;
+    background-color: rgb(48, 48, 48);
+    
+}
+
+.article h2 {
+    color: var(--grey);
+    margin-top: 0;
+}
+
+.article_text {
+    color: var(--grey);
+    font-size: 12px;
+
+}
+
+aside {
+    display: block;
+    background-color: rgb(53, 53, 53);
+}
+aside h2 {
+    text-align: center;
+    color: var(--light-blue);
+    margin: 10px;
+    font-size: 20px;
+
+}
+
+.book_image {
+    width: 250px;
+}
+
+aside p {
+    color: var(--grey);
+    font-size: 15px;
+}
+
+aside a {
+    background-color: var(--light-blue);
+    color: var(--black);
+    font-weight: bold;
+    padding: 10px 30px 10px 30px;
+    
+}
