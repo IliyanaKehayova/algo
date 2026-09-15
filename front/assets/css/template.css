@@ -1,6 +1,10 @@
 :root {
-    --black: #111111;
-    --grey: #CCCCCC;
+    --main-background: #111111;
+    --text-font: #CCCCCC;
+    --title-font: #CCCCCC;
+    --menu-section: rgb(53, 53, 53);
+    --menu-title: rgb(88, 88, 88);
+    --title-article-background: rgb(48, 48, 48);
     --blue: #085E8F;
     --dark-blue: #085A8F44;
     --light-blue: #09BCE0;
@@ -8,6 +12,22 @@
     --font: "Arial";
     color-scheme: light dark;
 }
+
+@media (prefers-color-scheme: light) {
+    :root {
+    --main-background: #d3d3d3;
+    --text-font: #070707;
+    --title-font: #CCCCCC;
+    --menu-section: rgb(192, 192, 192);
+    --menu-title: rgb(177, 177, 177);
+    --title-article-background: rgb(196, 196, 196);
+    --light-blue: #085E8F;
+    --green: #09BCE044;
+    --font: "Arial";
+    color-scheme: light dark;
+        }
+}
+
 
 html, body {
     font-family: var(--font);
@@ -30,13 +50,13 @@ header {
     background-size: cover;
     text-align: center;
     font-size: 30px;
-    color: var(--grey);
+    color: var(--text-font);
 }
 
 header div {
     text-align: center;
     font-size: 30px;
-    color: var(--grey);
+    color: var(--title-font);
     padding-top: 20px;
     font-weight: bold; 
 }
@@ -49,7 +69,7 @@ main {
 }
 
 .menu_section {
-    background-color: rgb(53, 53, 53);
+    background-color: var(--menu-section);
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
@@ -59,8 +79,8 @@ main {
 }
 
 .menu_title {
-    background-color: rgb(88, 88, 88);
-    color: var(--grey);
+    background-color: var(--menu-title);
+    color: var(--text-font);
     font-size: 30px;
     font-weight: bold;
     width: 100%;
@@ -81,20 +101,21 @@ main {
 
 .menu_list li {
     color: var(--light-blue);
-    background-color: rgb(88, 88, 88);
+    background-color: var(--menu-title);
     text-align: left;
     font-size: 22px;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
+    text-decoration: underline;
 }
 
 .main_section {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: var(--black);
+    background-color: var(--main-background);
     align-self: stretch;
 }
 
@@ -103,8 +124,8 @@ main > aside {
 }
 
 h1 {
-    color: var(--grey);
-    background-color: rgb(48, 48, 48);
+    color: var(--text-font);
+    background-color: var(--title-article-background);
     padding: 20px;
     margin: 0 0 20px 0;
     font-size: 30;
@@ -114,7 +135,7 @@ h1 {
 .articles_section {
     display: flex;
     flex-direction: row;
-    background-color: var(--black);
+    background-color: var(--main-background);
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
@@ -123,24 +144,25 @@ h1 {
 .article {
     width: 500px;
     height: 120px;
-    background-color: rgb(48, 48, 48);
+    background-color: var(--title-article-background);
     
 }
 
 .article h2 {
-    color: var(--grey);
+    color: var(--text-font);
     margin-top: 0;
 }
 
 .article_text {
-    color: var(--grey);
+    color: var(--text-font);
     font-size: 12px;
 
 }
 
 aside {
     display: block;
-    background-color: rgb(53, 53, 53);
+    background-color: var(--menu-section);
+    text-align: center;
 }
 aside h2 {
     text-align: center;
@@ -155,13 +177,15 @@ aside h2 {
 }
 
 aside p {
-    color: var(--grey);
+    color: var(--text-font);
     font-size: 15px;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 
 aside a {
     background-color: var(--light-blue);
-    color: var(--black);
+    color: var(--main-background);
     font-weight: bold;
     padding: 10px 30px 10px 30px;
     
