@@ -308,6 +308,9 @@ h1 {
 
 
 #bouton_non { 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     width: 85px;
     height: 50px;
     border-radius: 23px;
@@ -318,9 +321,17 @@ h1 {
     margin-bottom: 5px;
     color: white;
     grid-area: box-7;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    
 }
 
+
 #bouton_oui { 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     margin-left: 10px;
     margin-bottom: 5px;
     width: 85px;
@@ -330,9 +341,13 @@ h1 {
     background-color: #FBE8C7;
     font-weight: bold;
     font-size: 18px;
-    color: #503136;
     grid-area: box-6;
+    text-decoration: none;
+    color: #503136;
+    text-align: center;
+  
 }
+
 
 .section_experiences_projets {
     display: flex;
