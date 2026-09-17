@@ -192,11 +192,14 @@ h1 {
 
 
 .section_formations_presentation {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0;
     margin-left: 10px;
     margin-top: 15px;
+}
+
+.formations_et_fenetres {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .folder {
@@ -214,11 +217,16 @@ h1 {
     color: #503136;
 }
 
+#onglet_formations a {
+     text-decoration: none;
+}
+
 .trois_fenetres {
     position: relative;
     width: 250px;
     height: 220px;
-    margin-left: 30px;
+    margin-left: 25px;
+    margin-top: 15px;
 }
 
 
