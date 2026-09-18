@@ -274,7 +274,7 @@ h1 {
 .fenetre_description {
     background-color: #FBE8C7;
     width: 310px;
-    height: 400px; 
+    height: 2850px; 
     margin: 0px 50px 5px 50px;
     border-left: 1px solid #503136;
     border-right: 1px solid #503136;
@@ -325,4 +325,28 @@ footer {
     align-items: center;
     text-decoration: none;
     
+}
+
+.section_poste h2 {
+    font-size: 26px;
+    color: black;
+    font-weight: bolder;
+    margin-bottom: -10px;
+    margin-top: 0px;
+}
+
+h3 {
+    font-size: 18px;
+    color: #503136;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+li {
+    margin-left: -10px;
+    margin-bottom: 5px;
+}
+
+ul {
+    margin-bottom: 20px;
 }

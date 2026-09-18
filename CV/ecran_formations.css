@@ -274,7 +274,7 @@ h1 {
 .fenetre_description {
     background-color: #FBE8C7;
     width: 310px;
-    height: 350px; 
+    height: 400px; 
     margin: 0px 50px 5px 50px;
     border-left: 1px solid #503136;
     border-right: 1px solid #503136;
@@ -284,12 +284,17 @@ h1 {
 
 }
 
+.section_description {
+    position: relative;
+}
+
 .ruban {
-    width: 50px;
+    position:absolute;
+    z-index: 4;
+    top: -15px;
+    right: 25px;
     height: 50px;
-    position: absolute;
-    top: 37%;
-    left: 83%
+    width: 50px;
 }
 
 footer {

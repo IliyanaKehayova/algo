@@ -444,6 +444,11 @@ h1 {
 }
 
 #bouton_go {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
     background-color: #FBE8C7;
     width: 120px;
     height: 40px;
@@ -567,3 +572,5 @@ h1 {
     margin-left: -10px;
     margin-right: -10px;
 }
+
+
