@@ -274,7 +274,7 @@ h1 {
 .fenetre_description {
     background-color: #FBE8C7;
     width: 310px;
-    height: 2900px; 
+    height: 460px; 
     margin: 0px 50px 5px 50px;
     border-left: 1px solid #503136;
     border-right: 1px solid #503136;
@@ -310,45 +310,48 @@ footer {
     margin-left: 15px;
 }
 
-.bouton_contact {
+
+#form {
     display: flex;
-    background-color: #B48195;
-    border: 1px solid #503136;
-    width: 250px;
-    height: 60px;
-    border-radius: 20px;
-    margin-top: 12px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+    flex-direction: column;
+    color:#503136;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.preference_contact {
+    margin-top: -15px;
+}
+
+.boutons_effacer_envoyer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+#bouton_effacer, #bouton_envoyer {
+    margin: 20px;
+    height: 50px;
+    width: 130px;
     color: white;
-    font-size: 24px;
-    
-}
-
-.section_formation h2 {
-    font-size: 26px;
-    color: black;
     font-weight: bolder;
-    margin-bottom: -10px;
-    margin-top: 0px;
+    font-size: 20px;
+    background-color:#B48195;
+    border: 1px solid #503136;
+    border-radius: 10px;
+
 }
 
-h3 {
-    font-size: 18px;
-    color: #503136;
-    font-weight: bolder;
-    margin-bottom: 5px;
+.champ_obligatoire {
+    font-size: 10px;
+    margin-bottom: 0;
+    text-align: right;
 }
 
-li {
-    margin-left: -10px;
-    margin-bottom: 5px;
-}
-
-ul {
-    margin-bottom: 20px;
+.bouton_accueil {
+    width: 90px;
+    height: 90px;
+    margin-top: -5px;
+    margin-left: -15px;
 }

@@ -274,7 +274,7 @@ h1 {
 .fenetre_description {
     background-color: #FBE8C7;
     width: 310px;
-    height: 2900px; 
+    height: 1700px; 
     margin: 0px 50px 5px 50px;
     border-left: 1px solid #503136;
     border-right: 1px solid #503136;
@@ -329,7 +329,7 @@ footer {
     
 }
 
-.section_formation h2 {
+.section_competence h2 {
     font-size: 26px;
     color: black;
     font-weight: bolder;

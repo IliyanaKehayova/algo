@@ -274,7 +274,7 @@ h1 {
 .fenetre_description {
     background-color: #FBE8C7;
     width: 310px;
-    height: 400px; 
+    height: 370px; 
     margin: 0px 50px 5px 50px;
     border-left: 1px solid #503136;
     border-right: 1px solid #503136;
@@ -282,6 +282,12 @@ h1 {
     border-radius: 0 0 5px 5px;
     padding: 10px; 
 
+}
+
+.fenetre_description p {
+    font-size: 16px;
+    color: #503136;
+    margin-top: 0px;
 }
 
 .section_description {
@@ -310,7 +316,8 @@ footer {
     margin-left: 15px;
 }
 
-#bouton_contact {
+
+.bouton_contact {
     display: flex;
     background-color: #B48195;
     border: 1px solid #503136;
@@ -324,5 +331,8 @@ footer {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    color: white;
+    font-size: 24px;
     
 }
+

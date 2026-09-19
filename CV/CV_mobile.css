@@ -233,8 +233,8 @@ h1 {
 .ruban {
     position:absolute;
     z-index: 4;
-    top: 0;
-    right: 0;
+    top: -8px;
+    right: 10px;
     height: 50px;
     width: 50px;
 }
@@ -332,11 +332,11 @@ h1 {
     text-decoration: none;
     color: white;
     text-align: center;
-    
+    cursor: pointer;
 }
 
 
-#bouton_oui { 
+.bouton_oui { 
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -469,13 +469,24 @@ h1 {
     z-index: 1;
 }
 
-.projets_realises {
+.compe {
     position: absolute;
     z-index: 2;
     color: white;
     font-weight: bold;
     top: 27px; 
-    left: 60px;
+    left: 65px;
+    font-size: 20px;
+}
+
+.tences {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-weight: bold;
+    top: 45px; 
+    left: 61px;
+    font-size: 20px;
 }
 
 .langues_loisirs {
@@ -487,6 +498,7 @@ h1 {
 #image_langues {
     width: 210px;
     height: 150px;
+    cursor: pointer;
 }
 
 .loisirs_passions {
@@ -524,14 +536,14 @@ h1 {
     display: inline-block;
 } 
 
-#menu_deroulant_loisirs, #menu_deroulant_passions {
-    display: inline-block;
+#menu_deroulant_loisirs, 
+#menu_deroulant_passions {
     background-color: rgb(228, 228, 228);
     border: 1px solid #503136;
     width: 170px;
-    height: 20px;
+    height: 22px;
     margin: 10px 0px 8px 4px;
-    
+    text-align: left;
 }
 
 .fleche_menu_deroulant {
@@ -544,7 +556,44 @@ h1 {
     margin-left: -5px;
 }
 
-#bouton_contact {
+.bloc_menu_loisirs, .bloc_menu_passions {
+    position: relative;
+}
+
+#menu_liste_loisirs, #menu_liste_passions {
+    display: none;
+    position: absolute;
+    top: 31px;
+    left: 4px;
+    background-color: rgb(228, 228, 228);
+    width: 140px;
+    box-shadow: 2px 2px 5px grey;
+    z-index: 10;
+}
+
+#menu_liste_loisirs a, #menu_liste_passions a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+#menu_liste_loisirs.ouvert,
+#menu_liste_passions.ouvert {
+    display: block;
+}
+
+.bloc_menu_loisirs a:hover, 
+.bloc_menu_passions a:hover {
+    background-color: rgb(204, 183, 183);
+}
+
+.bloc_menu_loisirs:hover button,
+.bloc_menu_passions:hover button {
+    background-color: rgb(114, 113, 113);
+}
+
+.bouton_contact {
     display: flex;
     background-color: #B48195;
     border: 1px solid #503136;
@@ -557,6 +606,9 @@ h1 {
     margin-right: auto;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
     
 }
 
@@ -573,4 +625,179 @@ h1 {
     margin-right: -10px;
 }
 
+#popup_langues {
+    position: relative;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    top: 200px;
+}
 
+
+#image_fenetre_langues {
+    display: block;
+    width: 300px;
+    height: auto;
+}
+
+#reduire_popup_langues,
+#agrandir_popup_langues,
+#fermer_popup_langues {
+    z-index: 11;
+    position: absolute;
+    background-color: rgb(228, 228, 228);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 1px;
+    border: 2px solid #503136;
+    border-radius: 10px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+
+}
+
+#reduire_popup_langues {
+    top: 46px;
+    right: 100px;
+}
+
+#agrandir_popup_langues {
+    top: 46px;
+    right: 60px;
+}
+
+#agrandir_popup_langues span {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #503136;
+    border-radius: 5px;
+
+}
+
+#fermer_popup_langues {
+    top: 46px;
+    right: 20px;
+}
+
+.contenu_langues {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+}
+
+.contenu_langues h2 {
+    color: #503136;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 2px;
+}
+
+.contenu_langues ul {
+    color: #503136;
+    font-weight: bold;
+    margin-left: -25px;
+}
+
+.contenu_langues ul li{
+    margin-bottom: 10px;
+    
+}
+
+#popup_reponse_negative1, 
+#popup_reponse_negative2,
+#popup_reponse_negative3 {
+    position: relative;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    top: 100px;
+    left: -20px;
+}
+
+.fenetre_reponse_negative {
+    display: block; 
+    height: 450px; 
+    width: 410px;
+
+}
+
+
+.icone_attention {
+    position: absolute;
+    top: 90px;
+    left: 160px;
+    border: 5px solid red;
+    color: red;
+    border-radius: 50%;
+    font-size: 70px;
+    font-weight: bolder;
+    height: 80px; 
+    width: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#popup_reponse_negative_bouton_non, 
+#popup_reponse_negative_bouton_non2, 
+#popup_reponse_negative_bouton_non3 {
+    position: absolute;
+    top: 340px;
+    left: 40px;
+    color: #503136;
+    font-size: 14px;
+    font-weight: bolder;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FBE8C7;
+    border: 1px solid #503136;
+    margin-top: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.popup_reponse_negative_bouton_oui {
+    position: absolute;
+    top: 300px;
+    left: 130px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    width: 230px;
+    height: 90px;
+    border-radius: 23px;
+    border: 1px solid #503136;
+    background-color: #B48195;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+#popup_reponse_negative1 h2, 
+#popup_reponse_negative2 h2,
+#popup_reponse_negative3 h2 {
+    position: absolute;
+    top: 180px;
+    left: 30px;
+    width: 90%;
+    font-size: 30px;
+    text-align: center;
+    color: #503136;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

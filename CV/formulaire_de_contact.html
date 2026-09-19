@@ -9,7 +9,7 @@
  <link rel="icon" type="image/png" href="ribbon.png">
  <meta name="robots" content="index, follow" /> 
  <meta lang="fr">
- <link href="ecran_description.css" rel="stylesheet">
+ <link href="formulaire_de_contact.css" rel="stylesheet">
  <title>CV Iliyana KEHAYOVA</title>
 </head>
 
@@ -25,9 +25,6 @@
     </header>   
 
     <main>
-
-    
-
         <section class="section_photo_poste">
             
             <div class="onglet_photo">
@@ -60,32 +57,58 @@
 
         </section>
         
-        <section class="section_description">
+ <section class="section_description">
             <img src="ruban.png" alt="" class="ruban">
                 <div class="deuxieme_barre_haute">
-                    <span class="presentation">Je me présente...</span>
+                    <span class="presentation">Formulaire de contact</span>
                     <span id="reduire_onglet">_</span>
                     <span id="agrandir_onglet"><div></div></span>
                     <span id="fermer_onglet">X</span>
                 </div>
+
                 <div class="fenetre_description">
-                    <p>Nouvelle quête débloquée : devenir développeuse ! 🎮</p>
-                    <p>Après un parcours dans l’administratif, j’ai décidé de changer de domaine et de me lancer dans une reconversion vers le développement d’applications.</p>
-                    <p>Entre Java, HTML, CSS, JavaScript, Git et quelques bugs qui refusent obstinément de disparaître, j’apprends à concevoir des applications et à transformer mes idées en projets concrets.</p>
-                    <p>Mon objectif : continuer à progresser, acquérir de l’expérience et rejoindre une équipe dans laquelle je pourrai apprendre autant que contribuer. Après tout, chaque développeur a commencé un jour par un Hello World. 😄</>
+                    <section id="section_formulaire">
+                        <form method="POST" id="form">
+                            <label for="Nom et prénom">Nom et prénom*</label>
+                            <input type="text" id="nom_et_prenom" required>
+                            <br>
+
+                            <label for="Nom de l'entreprise">Nom de l'entreprise</label>
+                            <input type="text" id="nom_entreprise">
+                            <br>
+                            <label for="Adresse mail">Adresse mail*</label>
+                            
+                            <input type="email" id="adresse_mail" required>
+                            <br>
+                            <label for="Numéro de téléphone">Numéro de téléphone*</label>
+                            <input type="number" id="numero_telephone" required>
+                            <br>
+                            <label for="Commentaire">Commentaire</label>
+                            <textarea id="commentaire" rows="3" cols="20"></textarea>
+                            <br>
+                            <label for="Préférence de contact">Comment souhaitez vous être recontacté(e) ?*</label>
+                            <br>
+                            <label for="Par téléphone">Par téléphone</label>
+                            <input type="checkbox" class="preference_contact">
+                            <br>
+                            <label for="Par mail">Par mail</label>
+                            <input type="checkbox" class="preference_contact">
+                            <br>
+                            <p class="champ_obligatoire">*Champ obligatoire</p>
+</section>
+                            <section class="boutons_effacer_envoyer">
+                            <a href="CV_mobile.html"><img src="bouton_accueil.png" class="bouton_accueil" alt="Accueil"></a>
+                            <input type="reset" value="Effacer" id="bouton_effacer">
+                            <br>
+                            <input type="Submit" value="Envoyer" id="bouton_envoyer">
+                            </section>
+                        </form>
+                       
+                    </section>
+
                 </div>
-                
-            </section>
-       
         
-    </main>
-
-      
-    <footer>
-        <a href="CV_mobile.html"><img src="bouton_accueil.png" class="bouton_accueil" alt="Accueil" title="Accueil"></a>
-        <a href="formulaire_de_contact.html" class="bouton_contact"><img src="enveloppe.png" id="image_enveloppe"><span>Contactez-moi</span></a>
-    </footer>
-
+ 
 
 </body>
 

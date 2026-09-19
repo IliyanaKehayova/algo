@@ -85,8 +85,8 @@
                     Souhaitez-vous découvrir qui je suis ?
                 </p>
 
-                <a href="ecran_description.html" id="bouton_oui">OUI</a>
-                <a href="popup_reponse_negative.html" id="bouton_non">NON</a>
+                <a href="ecran_description.html" class="bouton_oui">OUI</a>
+                <button id="bouton_non">NON</button>
             </div>
 
             <div class="avant_derniere_fenetre"></div>
@@ -113,8 +113,11 @@
             </div>
 
             <div class="fenetre_projets">
-                <img src="icone_ordinateur.png" id="icone_ordinateur" alt="">
-                <span class="projets_realises">PROJETS RÉALISÉS</span>
+                <a href="ecran_competences.html">
+                    <img src="icone_ordinateur.png" id="icone_ordinateur" alt="">
+                    <span class="compe">COMPE</span>
+                    <span class="tences">TENCES</span>
+                </a>
             </div>
         </section>
     
@@ -128,12 +131,21 @@
                     <span></span>
                 </div>
                 <section class="bloc_menu_loisirs">
-                    <div id="menu_deroulant_loisirs">C:\Perso\Loisirs</div>
+                    <button id="menu_deroulant_loisirs">C:\Perso\Loisirs</button>
+                        <div id="menu_liste_loisirs">
+                            <a href="">Lecture</a>
+                            <a href="">Couture</a>
+                            <a href="">Jeux vidéo</a>
+                            <a href="">Tir à l'arc</a>
+                        </div>
                     <img src="fleche_blanche.png" class="fleche_menu_deroulant">
                 </section>
 
                 <section class="bloc_menu_passions">
-                    <div id="menu_deroulant_passions">C:\Perso\Passions</div>
+                    <button id="menu_deroulant_passions">C:\Perso\Passions</button>
+                        <div id="menu_liste_passions">
+                            <a href="">Chats</a>
+                        </div>
                     <img src="fleche_blanche.png" class="fleche_menu_deroulant">
                 </section>
             </section>
@@ -144,11 +156,97 @@
 
       
     <footer>
-        <button id="bouton_contact"><img src="enveloppe.png" id="image_enveloppe"><span>Contactez-moi</span></button>
+        <a href="formulaire_de_contact.html" class="bouton_contact"><img src="enveloppe.png" id="image_enveloppe"><span>Contactez-moi</span></a>
     </footer>
 
    
+        <dialog id="popup_langues">
+           
+                <img src="fenetre_langues.png" alt="Fenêtre des langues" id="image_fenetre_langues">
+                <span id="reduire_popup_langues">_</span>
+                <span id="agrandir_popup_langues"><span></span></span>
+                <span id="fermer_popup_langues">X</span>
+                <div class="contenu_langues">
+                    <h2>Langues</h2>
+                    <ul>
+                    <li>Français (Courant)</li>
+                    <li>Anglais (Courant)</li>
+                    <li>Bulgare (Langue maternelle)</li>
+                    <li>Chinois (Débutant)</li>
+                    <li>Allemand (Débutant)</li>
+                    </ul>
+                </div>
+        </dialog>
+
+
+         <dialog id="popup_reponse_negative1">
+           
+                <img src="fenetre_reponse_negative.png" alt="Fenêtre réponse négative" class="fenetre_reponse_negative">
+                <div class="icone_attention">!</div>
+                <h2>Vous vous êtes trompé de bouton&nbsp;?</h2>
+                <button id="popup_reponse_negative_bouton_non">NON</button>
+                <a href="ecran_description.html" class="popup_reponse_negative_bouton_oui">Oui, je veux voir le profil d'Iliyana</a>
+                
+        </dialog>
+
+        <dialog id="popup_reponse_negative2">
+           
+                <img src="fenetre_reponse_negative.png" alt="Fenêtre réponse négative" class="fenetre_reponse_negative">
+                <div class="icone_attention">!</div>
+                <h2>Vous faites exprès&nbsp;?</h2>
+                <button id="popup_reponse_negative_bouton_non2">NON</button>
+                <a href="ecran_description.html" class="popup_reponse_negative_bouton_oui">Je me suis trompé(e)</a>
+                
+        </dialog>
+
+        <dialog id="popup_reponse_negative3">
+           
+                <img src="fenetre_reponse_negative.png" alt="Fenêtre réponse négative" class="fenetre_reponse_negative">
+                <div class="icone_attention">!</div>
+                <h2>Vous savez quoi&nbsp;? Vous n'avez pas le choix&nbsp;!</h2>
+                <a href="ecran_description.html" id="popup_reponse_negative_bouton_non3">AH&nbsp;!</a>
+                <a href="ecran_description.html" class="popup_reponse_negative_bouton_oui">J'ai hâte de voir le profil d'Iliyana&nbsp;!</a>
+                
+        </dialog>
+
+         
+
+    <script>
+
+        const imageLangues =document.querySelector("#image_langues");
+        const popupLangues =document.querySelector("#popup_langues");
+        const fermerPopupLangues =document.querySelector("#fermer_popup_langues");
+        imageLangues.addEventListener("click", function () {popupLangues.showModal();});
+        fermerPopupLangues.addEventListener("click", function () {popupLangues.close();});
+
+
+        const boutonNon =document.querySelector("#bouton_non");
+        const popupReponseNegative1 =document.querySelector("#popup_reponse_negative1");
+        boutonNon.addEventListener("click", function () {popup_reponse_negative1.showModal();});
+
     
+        const popupReponseNegativeBoutonNon =document.querySelector("#popup_reponse_negative_bouton_non");
+        const popupReponseNegative2 =document.querySelector("#popup_reponse_negative2");
+        popupReponseNegativeBoutonNon.addEventListener("click", function () {popup_reponse_negative2.showModal();});
+
+        
+        const popupReponseNegativeBoutonNon2 =document.querySelector("#popup_reponse_negative_bouton_non2");
+        const popupReponseNegative3 =document.querySelector("#popup_reponse_negative3");
+        popupReponseNegativeBoutonNon2.addEventListener("click", function () {popup_reponse_negative3.showModal();});
+
+
+        const boutonLoisirs = document.querySelector("#menu_deroulant_loisirs");
+        const listeLoisirs = document.querySelector("#menu_liste_loisirs");
+        boutonLoisirs.addEventListener("click", function () {
+        listeLoisirs.classList.toggle("ouvert");});
+
+        const boutonPassions = document.querySelector("#menu_deroulant_passions");
+        const listePassions = document.querySelector("#menu_liste_passions");
+        boutonPassions.addEventListener("click", function () {
+        listePassions.classList.toggle("ouvert");});
+
+        
+    </script>
 
 </body>
 
