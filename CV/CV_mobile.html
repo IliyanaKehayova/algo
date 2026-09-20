@@ -179,34 +179,90 @@
         </dialog>
 
 
-         <dialog id="popup_reponse_negative1">
-           
-                <img src="fenetre_reponse_negative.png" alt="Fenêtre réponse négative" class="fenetre_reponse_negative">
+        <dialog id="popup_reponse_negative1">
+
+            <div class="fenetre_reponse_negative">
+
+                <div class="barre_popup_negative">
+
+                    <div class="boutons_fenetre">
+                        <span>_</span>
+                        <span class="milieu_bouton">
+                            <span></span>
+                        </span>
+                        <span>X</span>
+                    </div>
+
+                </div>
+
                 <div class="icone_attention">!</div>
+
                 <h2>Vous vous êtes trompé de bouton&nbsp;?</h2>
+
                 <button id="popup_reponse_negative_bouton_non">NON</button>
+
                 <a href="ecran_description.html" class="popup_reponse_negative_bouton_oui">Oui, je veux voir le profil d'Iliyana</a>
-                
+
+            </div>
+
         </dialog>
+
 
         <dialog id="popup_reponse_negative2">
-           
-                <img src="fenetre_reponse_negative.png" alt="Fenêtre réponse négative" class="fenetre_reponse_negative">
+
+            <div class="fenetre_reponse_negative">
+
+                <div class="barre_popup_negative">
+
+                    <div class="boutons_fenetre">
+                        <span>_</span>
+                        <span class="milieu_bouton">
+                            <span></span>
+                        </span>
+                        <span>X</span>
+                    </div>
+
+                </div>
+
                 <div class="icone_attention">!</div>
+
                 <h2>Vous faites exprès&nbsp;?</h2>
+
                 <button id="popup_reponse_negative_bouton_non2">NON</button>
+
                 <a href="ecran_description.html" class="popup_reponse_negative_bouton_oui">Je me suis trompé(e)</a>
-                
+
+            </div>
+
         </dialog>
 
+
         <dialog id="popup_reponse_negative3">
-           
-                <img src="fenetre_reponse_negative.png" alt="Fenêtre réponse négative" class="fenetre_reponse_negative">
+
+            <div class="fenetre_reponse_negative">
+
+                <div class="barre_popup_negative">
+
+                    <div class="boutons_fenetre">
+                        <span>_</span>
+                        <span class="milieu_bouton">
+                            <span></span>
+                        </span>
+                        <span>X</span>
+                    </div>
+
+                </div>
+
                 <div class="icone_attention">!</div>
+
                 <h2>Vous savez quoi&nbsp;? Vous n'avez pas le choix&nbsp;!</h2>
+
                 <a href="ecran_description.html" id="popup_reponse_negative_bouton_non3">AH&nbsp;!</a>
+
                 <a href="ecran_description.html" class="popup_reponse_negative_bouton_oui">J'ai hâte de voir le profil d'Iliyana&nbsp;!</a>
-                
+
+            </div>
+
         </dialog>
 
          
@@ -227,12 +283,12 @@
     
         const popupReponseNegativeBoutonNon =document.querySelector("#popup_reponse_negative_bouton_non");
         const popupReponseNegative2 =document.querySelector("#popup_reponse_negative2");
-        popupReponseNegativeBoutonNon.addEventListener("click", function () {popup_reponse_negative2.showModal();});
+        popupReponseNegativeBoutonNon.addEventListener("click", function () {popupReponseNegative2.showModal();});
 
         
         const popupReponseNegativeBoutonNon2 =document.querySelector("#popup_reponse_negative_bouton_non2");
         const popupReponseNegative3 =document.querySelector("#popup_reponse_negative3");
-        popupReponseNegativeBoutonNon2.addEventListener("click", function () {popup_reponse_negative3.showModal();});
+        popupReponseNegativeBoutonNon2.addEventListener("click", function () {popupReponseNegative3.showModal();});
 
 
         const boutonLoisirs = document.querySelector("#menu_deroulant_loisirs");
