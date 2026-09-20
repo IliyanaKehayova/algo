@@ -721,34 +721,84 @@ h1 {
 }
 
 .fenetre_reponse_negative {
-    display: block; 
-    height: 450px; 
+    position: relative;
+    display: block;
+    height: 390px;
     width: 410px;
-
+    background-color: #FBE8C7;
+    border: 2px solid #503136;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: 20px;
 }
 
+.barre_popup_negative {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #B48195;
+    border-bottom: 2px solid #503136;
+    display: flex;
+    align-items: center;
+}
+
+.boutons_fenetre {
+    display: flex;
+    margin-left: auto;
+    margin-right: 8px;
+    gap: 5px;
+}
+
+.boutons_fenetre > span {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(228, 228, 228);
+    border: 1px solid #503136;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #503136;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.milieu_bouton {
+    width: 25px;
+    height: 25px;
+}
+
+.milieu_bouton span {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #503136;
+    border-radius: 2px;
+}
 
 .icone_attention {
     position: absolute;
-    top: 90px;
+    top: 55px;
     left: 160px;
     border: 5px solid red;
     color: red;
     border-radius: 50%;
     font-size: 70px;
     font-weight: bolder;
-    height: 80px; 
+    height: 80px;
     width: 80px;
     text-align: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #popup_reponse_negative_bouton_non, 
 #popup_reponse_negative_bouton_non2, 
 #popup_reponse_negative_bouton_non3 {
     position: absolute;
-    top: 340px;
+    top: 310px;
     left: 40px;
     color: #503136;
     font-size: 14px;
@@ -768,7 +818,7 @@ h1 {
 
 .popup_reponse_negative_bouton_oui {
     position: absolute;
-    top: 300px;
+    top: 270px;
     left: 130px;
     margin-left: 10px;
     margin-bottom: 5px;
@@ -792,7 +842,7 @@ h1 {
 #popup_reponse_negative2 h2,
 #popup_reponse_negative3 h2 {
     position: absolute;
-    top: 180px;
+    top: 150px;
     left: 30px;
     width: 90%;
     font-size: 30px;
@@ -800,4 +850,8 @@ h1 {
     color: #503136;
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+#popup_reponse_negative_bouton_non3 {
+    text-decoration: none;
 }
