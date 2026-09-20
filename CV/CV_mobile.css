@@ -761,7 +761,6 @@ h1 {
     justify-content: center;
     align-items: center;
     color: #503136;
-    font-weight: bold;
     font-size: 18px;
 }
 
@@ -773,7 +772,7 @@ h1 {
 .milieu_bouton span {
     width: 15px;
     height: 15px;
-    border: 2px solid #503136;
+    border: 1px solid #503136;
     border-radius: 2px;
 }
 
