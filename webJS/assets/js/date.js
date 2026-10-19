@@ -1,27 +1,34 @@
+let today;
+const myDate = document.getElementById('myDate');
+const calculate = document.getElementById('calculate');
+const result = document.getElementById('result');
 
-function getDateOfBirth() {
-    const birthDateValue = document.getElementById('dateOfBirth').value;
-    const message = document.getElementById('messageEnDessous');
 
-    if (!birthDateValue) {
-        message.textContent = 'Merci de rentrer votre date de naissance.';
+function calculateAge() {
+    result.textContent = "";
+    let userDate = myDate.value;
+    userDate = Date.parse(userDate);
+    userDate = new Date(userDate);
+    today = new Date();
+
+    if (userDate > today) {
+        result.textContent = "ERREUR : Sélectionnez une date dans le passé."
         return;
     }
 
-    const dob = new Date(birthDateValue + 'T00:00:00');
-    const aujourdhui = new Date();
-    let age = aujourdhui.getFullYear() - dob.getFullYear();
-    const monthDifference = aujourdhui.getMonth() - dob.getMonth();
+    let dateFr = userDate.toLocaleDateString('fr-FR');
+    let timeFr = userDate.toLocaleTimeString();
 
-    if (monthDifference < 0 || (monthDifference === 0 && aujourdhui.getDate() < dob.getDate())) {
-        age--;
-    }
+    result.innerHTML = "Vous êtes né(e) le <span>" + dateFr + "</span> à <span>" + timeFr +"</span>";
 
-    message.textContent = 'Vous avez ' + age + ' ans.';
-    document.getElementById('p1').textContent = Date();
-    document.getElementById('p2').textContent = Date.now();
+    let dateDiff = today - userDate;
+    dateDiff = DateDiff / 1000 / 60 / 60 / 24 / 365.25;
+    dateDiff=Math.floor(dateDiff); 
+
+    result.innerHTML += "<br><br> Il s'est écoulé " + dateDiff + " années depuis votre naissance";
+
 }
 
-document.getElementById('buttonCalculate').addEventListener('click', getDateOfBirth);
+calculate.addEventListener('click', calculateAge);
 
 
