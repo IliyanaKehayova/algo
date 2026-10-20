@@ -1,0 +1,31 @@
+html {
+    background-color: #536B78;
+}
+
+body {
+    border: 1px solid #82a9c4;
+    padding : 10px;
+}
+
+h1, label, table, ul, li, button, p {
+    color: #82a9c4;
+}
+
+h1 {
+    margin: 0 10px 10px 10px;
+}
+
+input, table, button {
+    background-color: #637081;
+}
+
+input, button {
+    border: 1px solid #82a9c4;
+    margin: 10px;
+}
+
+form {
+    border: 1px dashed #82a9c4;
+    padding: 10px;
+}
+
