@@ -1,0 +1,26 @@
+/* Réinitialisation */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    background:chartreuse;
+}
+.cat{
+    width: calc( 900px / 6);
+    height: 150px;
+    background: url("cat.png");
+    animation: run 2s steps(6) infinite;
+
+}
+@keyframes run{
+    0%{
+        background-position: 0;
+        transform: translateX(0px);
+    }
+    100%{
+        background-position: -900px;
+        transform: translateX(900px);
+    }
+}
