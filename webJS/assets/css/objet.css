@@ -1,0 +1,29 @@
+th, tr, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+input {
+    width: 15rem;
+}
+
+table, input {
+    background-color: rgb(134, 253, 110);
+
+}
+
+tr, th, td {
+    border: 1px solid white;
+}
+
+input {
+    border: 1px solid white;
+}
