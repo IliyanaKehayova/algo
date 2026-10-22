@@ -7,8 +7,19 @@ const myEmployee = {
 
 }
 
+
+
 myEmployee.email = myEmployee.firstname.toLowerCase() + "." + myEmployee.lastname.toLocaleLowerCase() + "@example.fr"
-myEmployee.salary = myEmployee.salary + "€"
+myEmployee.salary = myEmployee.salary + "€";
+
+
+const tabDate = myEmployee[key].split("-");
+myInput.value = tabDate[2] + "-" + tabDate[1] + "-" + tabDate[0];
+
+
+
+
+
 const main = document.querySelector('main');
 const myTable = document.createElement('table');
 main.appendChild(myTable);
@@ -19,8 +30,8 @@ const myRow = document.createElement('tr');
 myThead.appendChild(myRow);
 
 
-//la version coutre en format fonction
-//on déclare que on a du texte sur 
+//la version courte en format fonction
+//on déclare que on a du texte dans le table head
 
 function createHeaderCell (row, text) {
     const th = document.createElement('th');
@@ -55,6 +66,9 @@ myThSalary.textContent = "Salaire";
 */
 
 
+
+//on va définir ce qu'il y a dans le corps du tableau
+
 const myFirstRow = document.createElement('tr');
 myBody.appendChild(myFirstRow);
 
@@ -66,9 +80,14 @@ for (info in myEmployee){
 }
 
 
+
+//le titre du formulaire
+
 const formTitle = document.createElement('p');
 formTitle.textContent = "Modifier le profil";
 main.appendChild(formTitle);
+
+//on créé un champs formulaire
 
 const myForm = document.createElement('form');
 main.appendChild(myForm);
@@ -76,17 +95,20 @@ main.appendChild(myForm);
 
 
 
+//on va afficher avec une fonction les labels dans le formulaire qui sert à modifier les informations
+
 for (const key in myEmployee) {
 
 
-    if(key=="email"){
+    if(key=="email"){ //on saute le label mail
         continue;
     }
-
+    
 
     
-    const myFormLabel = document.createElement('label'); // on crée un label en él html
+    const myFormLabel = document.createElement('label'); // on crée un label en élément html
     myForm.appendChild(myFormLabel);
+    
     myFormLabel.textContent = key;
 
     //myFormLabel.appendChild(myLabel);
@@ -96,11 +118,56 @@ for (const key in myEmployee) {
     myInput.value = myEmployee[key]; // ce qui va s'afficher dans le champs input correspond a la valeur associée à key
     myInput.id = key;
     myFormLabel.htmlFor = myInput.id;
-    
-    
+
+    if (key=="birthday"){
+    const tabDate = myEmployee[key].split("-");
+    myInput.value = tabDate[2] + "-" + tabDate[1] + "-" + tabDate[0];
+
+    }
+
+    /*
+    for (const key in labels) {
+        
+        
+        const label = object[key];
+        
+        
+    }
+*/
+
 }
 
 
+
+
+ const boutonEnregistrer = document.createElement('button');
+    myForm.appendChild(boutonEnregistrer);
+    boutonEnregistrer.textContent  = "Enregistrer";
+    boutonEnregistrer.type = "button";
+
+    boutonEnregistrer.addEventListener("click", majProfil);
+
+
+function majProfil (boutonEnregistrer) {
+    
+
+    for (const element in myEmployee) {
+
+        if(element=="email"){
+        continue;
+        }
+        myEmployee[element] = document.getElementById(element).value;
+        
+    }
+    myEmployee.email = myEmployee.firstname.toLowerCase() + "." + myEmployee.lastname.toLocaleLowerCase() + "@example.fr"
+ 
+    for (const cell in myFirstRow.cells) {
+        myFirstRow.cells[cell].textContent = Object.values(myEmployee)[cell];
+
+        
+}
+
+}
 
 
 
