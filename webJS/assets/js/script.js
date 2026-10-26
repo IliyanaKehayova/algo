@@ -39,3 +39,6 @@ afficherDate();
 
 const mybtnHour = document.getElementById("btnHour");
 mybtnHour.addEventListener("click", afficherHeure);
+
+
+
