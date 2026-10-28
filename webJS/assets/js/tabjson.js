@@ -1,5 +1,14 @@
 const main = document.getElementsByTagName('main');
 const tbody = document.getElementById('cards-tbody');
+const valider = document.getElementById('valider');
+const stat = document.getElementById('stat');
+const idParagraph = document.getElementById('id-paragraph')
+const attackParagraph = document.getElementById('highest-attack-card-paragraph');
+const nameParagraph = document.getElementById('name-paragraph');
+const playedParagraph = document.getElementById('played-paragraph');
+const victoryParagraph = document.getElementById('victory-paragraph');
+const powerParagraph = document.getElementById('power-paragraph');
+const armorParagraph = document.getElementById('armor-paragraph');
 
 function createCell (row, value){
 
@@ -16,22 +25,107 @@ fetch('./assets/json/tabjson.json')
     for (let i = 0; i < data.length; i++) {
       const row = document.createElement("tr");
       for (const key in data[0]) {
-
             if (key === "description" && data[i][key] == undefined){
-
             createCell(row, "");
-
         }
         else {
             createCell(row, data[i][key]);
-        }
+        }  
+    }
+   tbody.appendChild(row);
+    }  
+
+
+    /*
+    
+    valider.addEventListener('click',
+    function findStat(event, stat){
+        event.preventDefault();
+        if(stat=="id" || 
+            stat=="name" || 
+            stat=="level" || 
+            stat=="description" || 
+            stat=="power" || 
+            stat=="attack" || 
+            stat=="armor" || 
+            stat=="damage" || 
+            stat=="mitigation" || 
+            stat=="played" || 
+            stat=="victory" || 
+            stat=="defeat" || 
+            stat=="draw"){
             
+            return stat.value;
+        }
+        else {
+            alert("You must enter a valid stat from the table.")
+        } 
+});        
+
+
+
+
+
+    function findMax (data){
+        let bestCard = null;
+        
+    
+        for(let l = 0; l < data.length; l++){   
+           if(data[l].findStat(stat) > max){
+           bestCard = data[l]; //on stocke toutes les infos de l'objet dans une variable
+            
+
+           } 
+}   return bestCard;
     }
 
-   tbody.appendChild(row);
 
+
+
+        
+
+
+    function fillField(findMax(data)){
     
-    }  
+    let idContent = "Id : " + bestCard.id;
+    let nameContent = "Name : " + bestCard.name;
+    let attackContent = "Attack : " + bestCard.attack;
+    let playedContent = "Played : " + bestCard.played;
+    let victoryContent = "Victories : " + bestCard.victory;
+    let powerContent = "Power : " + bestCard.power;
+    let armorContent = "Defense : " + bestCard.armor;
+
+    return {
+    idParagraph,
+    nameParagraph,
+    attackParagraph,
+    playedParagraph,
+    victoryParagraph,
+    powerParagraph,
+    armorParagraph
+}
+    }
+
+    idParagraph.textContent = idContent;
+    nameParagraph.textContent = nameContent;
+    attackParagraph.textContent = attackContent;
+    playedParagraph.textContent = playedContent;
+    victoryParagraph.textContent = victoryContent;
+    powerParagraph.textContent = powerContent;
+    armorParagraph.textContent = armorContent;
+
+
+
+
+*/
+
+
+
+
+
+
+
+
 
     function findMax (data){
         let maxAttack = 0;
@@ -41,6 +135,8 @@ fetch('./assets/json/tabjson.json')
         let victory = "";
         let power = "";
         let armor = "";
+
+
         for(let l = 0; l < data.length; l++){   
            
            
@@ -54,6 +150,7 @@ fetch('./assets/json/tabjson.json')
             armor = data[l].armor;
            }
         
+
 }   return {
     name: cardName,
     attack: maxAttack,
