@@ -12,7 +12,8 @@
     "played": 499546,
     "victory": 320499,
     "defeat": 166596,
-    "draw": 12451
+    "draw": 12451,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 2,
@@ -26,7 +27,8 @@
     "played": 500062,
     "victory": 320801,
     "defeat": 166694,
-    "draw": 12567
+    "draw": 12567,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 3,
@@ -40,7 +42,8 @@
     "played": 501437,
     "victory": 321374,
     "defeat": 167509,
-    "draw": 12554
+    "draw": 12554,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 4,
@@ -54,7 +57,8 @@
     "played": 499958,
     "victory": 320326,
     "defeat": 167186,
-    "draw": 12446
+    "draw": 12446,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 5,
@@ -68,7 +72,8 @@
     "played": 499004,
     "victory": 285768,
     "defeat": 197039,
-    "draw": 16197
+    "draw": 16197,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 6,
@@ -82,7 +87,8 @@
     "played": 500127,
     "victory": 286449,
     "defeat": 197676,
-    "draw": 16002
+    "draw": 16002,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 7,
@@ -96,7 +102,8 @@
     "played": 498937,
     "victory": 284823,
     "defeat": 198239,
-    "draw": 15875
+    "draw": 15875,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 8,
@@ -110,7 +117,8 @@
     "played": 501553,
     "victory": 287171,
     "defeat": 198111,
-    "draw": 16271
+    "draw": 16271,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 9,
@@ -124,7 +132,8 @@
     "played": 500690,
     "victory": 248043,
     "defeat": 236767,
-    "draw": 15880
+    "draw": 15880,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 10,
@@ -138,7 +147,8 @@
     "played": 500809,
     "victory": 247620,
     "defeat": 237474,
-    "draw": 15715
+    "draw": 15715,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 11,
@@ -152,7 +162,8 @@
     "played": 501084,
     "victory": 247739,
     "defeat": 237341,
-    "draw": 16004
+    "draw": 16004,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 12,
@@ -166,7 +177,8 @@
     "played": 500248,
     "victory": 247659,
     "defeat": 236577,
-    "draw": 16012
+    "draw": 16012,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 13,
@@ -180,7 +192,8 @@
     "played": 499783,
     "victory": 247117,
     "defeat": 236713,
-    "draw": 15953
+    "draw": 15953,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 14,
@@ -194,7 +207,8 @@
     "played": 500391,
     "victory": 200341,
     "defeat": 283908,
-    "draw": 16142
+    "draw": 16142,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 15,
@@ -208,7 +222,8 @@
     "played": 499992,
     "victory": 199827,
     "defeat": 283938,
-    "draw": 16227
+    "draw": 16227,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 16,
@@ -222,7 +237,8 @@
     "played": 499275,
     "victory": 200115,
     "defeat": 283012,
-    "draw": 16148
+    "draw": 16148,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 17,
@@ -236,7 +252,8 @@
     "played": 499305,
     "victory": 199384,
     "defeat": 283606,
-    "draw": 16315
+    "draw": 16315,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 18,
@@ -250,7 +267,8 @@
     "played": 499763,
     "victory": 90918,
     "defeat": 395978,
-    "draw": 12867
+    "draw": 12867,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 19,
@@ -264,7 +282,8 @@
     "played": 501324,
     "victory": 148090,
     "defeat": 339352,
-    "draw": 13882
+    "draw": 13882,
+    "image": "assets/img/armour.png"
   },
   {
     "id": 20,
@@ -278,6 +297,7 @@
     "played": 499894,
     "victory": 147942,
     "defeat": 338290,
-    "draw": 13662
+    "draw": 13662,
+    "image": "assets/img/armour.png"
   }
 ]
