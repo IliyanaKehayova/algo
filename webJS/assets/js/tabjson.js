@@ -28,6 +28,14 @@ fetch('./assets/json/tabjson.json')
     for (let i = 0; i < data.length; i++) {
       const row = document.createElement("tr");
       for (const key in data[0]) {
+
+
+        
+        if(key === "image"){
+            continue;
+        }
+
+
             if (key === "description" && data[i][key] == undefined){
             createCell(row, "");
         }

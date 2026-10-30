@@ -39,6 +39,7 @@ th {
     "highest-attack-card-paragraph"
     "power-paragraph"
     "armor-paragraph";
+    color: white;
 }
 
 #gighest-attack-card span {
@@ -49,4 +50,14 @@ th {
     width: 200px;
     align-self: center;
     justify-self: center;
+   
 }
+
+
+#image:hover {
+    transform-origin: 50% 50%;
+    cursor: pointer;
+    animation: anime 3000ms ease-in 2 alternate forwards;
+ 
+}
+
